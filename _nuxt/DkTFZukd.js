@@ -1,0 +1,1 @@
+import{h as e}from"./BAJIPnNx.js";import{F as t,U as c}from"./BFJNjpON.js";const r={};function n(o,s){return c(),t("div")}const m=Object.assign(e(r,[["render",n]]),{__name:"WidgetEmpty"});export{m as default};
