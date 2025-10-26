@@ -1,0 +1,1 @@
+import{h as e}from"./raXDgERY.js";import{F as t,U as c}from"./Dkj_qHQx.js";const r={};function n(o,s){return c(),t("div")}const m=Object.assign(e(r,[["render",n]]),{__name:"WidgetEmpty"});export{m as default};

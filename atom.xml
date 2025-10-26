@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/assets/atom.xsl"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>https://www.luochen.chat/</id>
+  <title>落尘up</title>
+  <updated>2025-10-26T14:04:47.296Z</updated>
+  <description>我是落尘up，一名 OceanBase 技术工程师，也会写点 Java 后端代码。平时喜欢折腾各种技术，有时候写总结，有时候纯粹摸鱼闲聊。这个博客就是我生活和工作的记录本，既有数据库和后端的实用经验，也有一些胡思乱想的小感悟。折腾不止，摸鱼不断，希望在这里能和你一起分享成长，也顺便交到更多朋友。</description>
+  <author>
+    <name>落尘up</name>
+    <email>969488647@qq.com</email>
+    <uri>https://www.luochen.chat/</uri>
+  </author>
+  <link href="https://www.luochen.chat/atom.xml" rel="self"></link>
+  <link href="https://www.luochen.chat/" rel="alternate"></link>
+  <language>zh-CN</language>
+  <generator uri="https://github.com/" version="3.3.4">Luo Chen Blog</generator>
+  <icon>https://www.luochenup.xyz/b_a5a3aa888355bdc617dca021efb19ab8.png</icon>
+  <logo>https://www.luochenup.xyz/b_a5a3aa888355bdc617dca021efb19ab8.png</logo>
+  <rights>© 2025 落尘up</rights>
+  <subtitle>愿你我都做,生活的高手。</subtitle>
+</feed>

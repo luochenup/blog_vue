@@ -1,0 +1,591 @@
+<!DOCTYPE html><html  lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>实战Cursor | 落尘up</title><link rel="preconnect" href="https://twikoo.luochenup.top/"><link rel="preconnect" href="https://fonts.gstatic.cn" crossorigin><link rel="stylesheet" href="https://lib.baomitu.com/KaTeX/0.16.9/katex.min.css"><link rel="stylesheet" href="https://fonts.googleapis.cn/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Noto+Sans+SC:wght@100..900&family=Noto+Serif+SC:wght@200..900&display=swap"><link rel="stylesheet" href="/_nuxt/entry.FMkpf1S7.css" crossorigin><link rel="stylesheet" href="/_nuxt/_...Lvrx2bqj.css" crossorigin><link rel="stylesheet" href="/_nuxt/Comment.zZ2upzCF.css" crossorigin><link rel="stylesheet" href="/_nuxt/ProseA.DhJIX4mV.css" crossorigin><link rel="stylesheet" href="/_nuxt/Toc.Bs129K59.css" crossorigin><link rel="stylesheet" href="/_nuxt/ZWidget.qVkXTaJH.css" crossorigin><link rel="stylesheet" href="/_nuxt/ProseCode.a2_W97gt.css" crossorigin><style>:where(.i-ph\:align-right-duotone){display:inline-block;width:1em;height:1em;background-color:currentColor;-webkit-mask-image:var(--svg);mask-image:var(--svg);-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:100% 100%;mask-size:100% 100%;--svg:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256' width='256' height='256'%3E%3Cg fill='black'%3E%3Cpath d='M184 64v40a8 8 0 0 1-8 8H80a8 8 0 0 1-8-8V64a8 8 0 0 1 8-8h96a8 8 0 0 1 8 8m-8 80H40a8 8 0 0 0-8 8v40a8 8 0 0 0 8 8h136a8 8 0 0 0 8-8v-40a8 8 0 0 0-8-8' opacity='.2'/%3E%3Cpath d='M224 40v176a8 8 0 0 1-16 0V40a8 8 0 0 1 16 0m-32 24v40a16 16 0 0 1-16 16H80a16 16 0 0 1-16-16V64a16 16 0 0 1 16-16h96a16 16 0 0 1 16 16m-16 0H80v40h96Zm16 88v40a16 16 0 0 1-16 16H40a16 16 0 0 1-16-16v-40a16 16 0 0 1 16-16h136a16 16 0 0 1 16 16m-16 0H40v40h136Z'/%3E%3C/g%3E%3C/svg%3E")}:where(.i-ph\:archive-bold){display:inline-block;width:1em;height:1em;background-color:currentColor;-webkit-mask-image:var(--svg);mask-image:var(--svg);-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:100% 100%;mask-size:100% 100%;--svg:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256' width='256' height='256'%3E%3Cpath fill='black' d='M224 44H32a20 20 0 0 0-20 20v24a20 20 0 0 0 16 19.6V192a20 20 0 0 0 20 20h160a20 20 0 0 0 20-20v-84.4A20 20 0 0 0 244 88V64a20 20 0 0 0-20-20M36 68h184v16H36Zm16 120v-80h152v80Zm112-52a12 12 0 0 1-12 12h-48a12 12 0 0 1 0-24h48a12 12 0 0 1 12 12'/%3E%3C/svg%3E")}:where(.i-ph\:arrow-circle-up-bold){display:inline-block;width:1em;height:1em;background-color:currentColor;-webkit-mask-image:var(--svg);mask-image:var(--svg);-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:100% 100%;mask-size:100% 100%;--svg:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256' width='256' height='256'%3E%3Cpath fill='black' d='M128 20a108 108 0 1 0 108 108A108.12 108.12 0 0 0 128 20m0 192a84 84 0 1 1 84-84a84.09 84.09 0 0 1-84 84m40.49-100.49a12 12 0 0 1-17 17L140 117v51a12 12 0 0 1-24 0v-51l-11.51 11.52a12 12 0 0 1-17-17l32-32a12 12 0 0 1 17 0Z'/%3E%3C/svg%3E")}:where(.i-ph\:book-open-bold){display:inline-block;width:1em;height:1em;background-color:currentColor;-webkit-mask-image:var(--svg);mask-image:var(--svg);-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:100% 100%;mask-size:100% 100%;--svg:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256' width='256' height='256'%3E%3Cpath fill='black' d='M232 44h-72a43.86 43.86 0 0 0-32 13.85A43.86 43.86 0 0 0 96 44H24a12 12 0 0 0-12 12v144a12 12 0 0 0 12 12h72a20 20 0 0 1 20 20a12 12 0 0 0 24 0a20 20 0 0 1 20-20h72a12 12 0 0 0 12-12V56a12 12 0 0 0-12-12M96 188H36V68h60a20 20 0 0 1 20 20v104.81A43.8 43.8 0 0 0 96 188m124 0h-60a43.7 43.7 0 0 0-20 4.83V88a20 20 0 0 1 20-20h60Z'/%3E%3C/svg%3E")}:where(.i-ph\:calendar-dots-bold){display:inline-block;width:1em;height:1em;background-color:currentColor;-webkit-mask-image:var(--svg);mask-image:var(--svg);-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:100% 100%;mask-size:100% 100%;--svg:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256' width='256' height='256'%3E%3Cpath fill='black' d='M208 28h-20v-4a12 12 0 0 0-24 0v4H92v-4a12 12 0 0 0-24 0v4H48a20 20 0 0 0-20 20v160a20 20 0 0 0 20 20h160a20 20 0 0 0 20-20V48a20 20 0 0 0-20-20M68 52a12 12 0 0 0 24 0h72a12 12 0 0 0 24 0h16v24H52V52ZM52 204V100h152v104Zm92-76a16 16 0 1 1-16-16a16 16 0 0 1 16 16m48 0a16 16 0 1 1-16-16a16 16 0 0 1 16 16m-96 48a16 16 0 1 1-16-16a16 16 0 0 1 16 16m48 0a16 16 0 1 1-16-16a16 16 0 0 1 16 16m48 0a16 16 0 1 1-16-16a16 16 0 0 1 16 16'/%3E%3C/svg%3E")}:where(.i-ph\:calendar-plus-bold){display:inline-block;width:1em;height:1em;background-color:currentColor;-webkit-mask-image:var(--svg);mask-image:var(--svg);-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:100% 100%;mask-size:100% 100%;--svg:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256' width='256' height='256'%3E%3Cpath fill='black' d='M208 28h-20v-4a12 12 0 0 0-24 0v4H92v-4a12 12 0 0 0-24 0v4H48a20 20 0 0 0-20 20v160a20 20 0 0 0 20 20h160a20 20 0 0 0 20-20V48a20 20 0 0 0-20-20M68 52a12 12 0 0 0 24 0h72a12 12 0 0 0 24 0h16v24H52V52ZM52 204V100h152v104Zm112-52a12 12 0 0 1-12 12h-12v12a12 12 0 0 1-24 0v-12h-12a12 12 0 0 1 0-24h12v-12a12 12 0 0 1 24 0v12h12a12 12 0 0 1 12 12'/%3E%3C/svg%3E")}:where(.i-ph\:caret-double-up-bold){display:inline-block;width:1em;height:1em;background-color:currentColor;-webkit-mask-image:var(--svg);mask-image:var(--svg);-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:100% 100%;mask-size:100% 100%;--svg:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256' width='256' height='256'%3E%3Cpath fill='black' d='M216.49 191.51a12 12 0 0 1-17 17L128 137l-71.51 71.49a12 12 0 0 1-17-17l80-80a12 12 0 0 1 17 0Zm-160-63L128 57l71.51 71.52a12 12 0 0 0 17-17l-80-80a12 12 0 0 0-17 0l-80 80a12 12 0 0 0 17 17Z'/%3E%3C/svg%3E")}:where(.i-ph\:chat-circle-text-bold){display:inline-block;width:1em;height:1em;background-color:currentColor;-webkit-mask-image:var(--svg);mask-image:var(--svg);-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:100% 100%;mask-size:100% 100%;--svg:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256' width='256' height='256'%3E%3Cpath fill='black' d='M172 108a12 12 0 0 1-12 12H96a12 12 0 0 1 0-24h64a12 12 0 0 1 12 12m-12 28H96a12 12 0 0 0 0 24h64a12 12 0 0 0 0-24m76-8a108 108 0 0 1-157.23 96.15L46.34 235A20 20 0 0 1 21 209.66l10.81-32.43A108 108 0 1 1 236 128m-24 0a84 84 0 1 0-156.73 42.06a12 12 0 0 1 1 9.81l-9.93 29.79l29.79-9.93a12.1 12.1 0 0 1 3.8-.62a12 12 0 0 1 6 1.62A84 84 0 0 0 212 128'/%3E%3C/svg%3E")}:where(.i-ph\:code-bold){display:inline-block;width:1em;height:1em;background-color:currentColor;-webkit-mask-image:var(--svg);mask-image:var(--svg);-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:100% 100%;mask-size:100% 100%;--svg:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256' width='256' height='256'%3E%3Cpath fill='black' d='M71.68 97.22L34.74 128l36.94 30.78a12 12 0 1 1-15.36 18.44l-48-40a12 12 0 0 1 0-18.44l48-40a12 12 0 0 1 15.36 18.44m176 21.56l-48-40a12 12 0 1 0-15.36 18.44L221.26 128l-36.94 30.78a12 12 0 1 0 15.36 18.44l48-40a12 12 0 0 0 0-18.44M164.1 28.72a12 12 0 0 0-15.38 7.18l-64 176a12 12 0 0 0 7.18 15.37a11.8 11.8 0 0 0 4.1.73a12 12 0 0 0 11.28-7.9l64-176a12 12 0 0 0-7.18-15.38'/%3E%3C/svg%3E")}:where(.i-ph\:envelope-simple-bold){display:inline-block;width:1em;height:1em;background-color:currentColor;-webkit-mask-image:var(--svg);mask-image:var(--svg);-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:100% 100%;mask-size:100% 100%;--svg:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256' width='256' height='256'%3E%3Cpath fill='black' d='M224 44H32a12 12 0 0 0-12 12v136a20 20 0 0 0 20 20h176a20 20 0 0 0 20-20V56a12 12 0 0 0-12-12m-30.85 24L128 127.72L62.85 68ZM44 188V83.28l75.89 69.57a12 12 0 0 0 16.22 0L212 83.28V188Z'/%3E%3C/svg%3E")}:where(.i-ph\:files-bold){display:inline-block;width:1em;height:1em;background-color:currentColor;-webkit-mask-image:var(--svg);mask-image:var(--svg);-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:100% 100%;mask-size:100% 100%;--svg:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256' width='256' height='256'%3E%3Cpath fill='black' d='m220.49 59.51l-40-40A12 12 0 0 0 172 16H92a20 20 0 0 0-20 20v20H56a20 20 0 0 0-20 20v140a20 20 0 0 0 20 20h108a20 20 0 0 0 20-20v-20h20a20 20 0 0 0 20-20V68a12 12 0 0 0-3.51-8.49M160 212H60V80h67l33 33Zm40-40h-16v-64a12 12 0 0 0-3.51-8.49l-40-40A12 12 0 0 0 132 56H96V40h71l33 33Zm-56-28a12 12 0 0 1-12 12H88a12 12 0 0 1 0-24h44a12 12 0 0 1 12 12m0 40a12 12 0 0 1-12 12H88a12 12 0 0 1 0-24h44a12 12 0 0 1 12 12'/%3E%3C/svg%3E")}:where(.i-ph\:github-logo-bold){display:inline-block;width:1em;height:1em;background-color:currentColor;-webkit-mask-image:var(--svg);mask-image:var(--svg);-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:100% 100%;mask-size:100% 100%;--svg:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256' width='256' height='256'%3E%3Cpath fill='black' d='M212.62 75.17A63.7 63.7 0 0 0 206.39 26A12 12 0 0 0 196 20a63.71 63.71 0 0 0-50 24h-20a63.71 63.71 0 0 0-50-24a12 12 0 0 0-10.39 6a63.7 63.7 0 0 0-6.23 49.17A61.5 61.5 0 0 0 52 104v8a60.1 60.1 0 0 0 45.76 58.28A43.66 43.66 0 0 0 92 192v4H76a20 20 0 0 1-20-20a44.05 44.05 0 0 0-44-44a12 12 0 0 0 0 24a20 20 0 0 1 20 20a44.05 44.05 0 0 0 44 44h16v12a12 12 0 0 0 24 0v-40a20 20 0 0 1 40 0v40a12 12 0 0 0 24 0v-40a43.66 43.66 0 0 0-5.76-21.72A60.1 60.1 0 0 0 220 112v-8a61.5 61.5 0 0 0-7.38-28.83M196 112a36 36 0 0 1-36 36h-48a36 36 0 0 1-36-36v-8a37.87 37.87 0 0 1 6.13-20.12a11.65 11.65 0 0 0 1.58-11.49a39.9 39.9 0 0 1-.4-27.72a39.87 39.87 0 0 1 26.41 17.8a12 12 0 0 0 10.1 5.53h32.35a12 12 0 0 0 10.11-5.53a39.84 39.84 0 0 1 26.41-17.8a39.9 39.9 0 0 1-.4 27.72a12 12 0 0 0 1.61 11.53A37.85 37.85 0 0 1 196 104Z'/%3E%3C/svg%3E")}:where(.i-ph\:highlighter-bold){display:inline-block;width:1em;height:1em;background-color:currentColor;-webkit-mask-image:var(--svg);mask-image:var(--svg);-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:100% 100%;mask-size:100% 100%;--svg:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256' width='256' height='256'%3E%3Cpath fill='black' d='M252.49 107.51a12 12 0 0 0-17 0L192 151l-79-79l43.52-43.51a12 12 0 0 0-17-17L93.17 57.86a20 20 0 0 0-4.72 20.72L69.17 97.86a20 20 0 0 0 0 28.28L71 128l-55.49 55.51a12 12 0 0 0 4.7 19.87l72 24A11.8 11.8 0 0 0 96 228a12 12 0 0 0 8.49-3.52L136 193l1.86 1.86a20 20 0 0 0 28.28 0l19.27-19.27a20.3 20.3 0 0 0 6.59 1.13a19.86 19.86 0 0 0 14.14-5.86l46.35-46.34a12 12 0 0 0 0-17.01M92.76 202.27l-46.55-15.51L88 145l31 31ZM152 175l-55.51-55.48L89 112l15-15l63 63Z'/%3E%3C/svg%3E")}:where(.i-ph\:house-bold){display:inline-block;width:1em;height:1em;background-color:currentColor;-webkit-mask-image:var(--svg);mask-image:var(--svg);-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:100% 100%;mask-size:100% 100%;--svg:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256' width='256' height='256'%3E%3Cpath fill='black' d='m222.14 105.85l-80-80a20 20 0 0 0-28.28 0l-80 80A19.86 19.86 0 0 0 28 120v96a12 12 0 0 0 12 12h64a12 12 0 0 0 12-12v-52h24v52a12 12 0 0 0 12 12h64a12 12 0 0 0 12-12v-96a19.86 19.86 0 0 0-5.86-14.15M204 204h-40v-52a12 12 0 0 0-12-12h-48a12 12 0 0 0-12 12v52H52v-82.35l76-76l76 76Z'/%3E%3C/svg%3E")}:where(.i-ph\:link-bold){display:inline-block;width:1em;height:1em;background-color:currentColor;-webkit-mask-image:var(--svg);mask-image:var(--svg);-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:100% 100%;mask-size:100% 100%;--svg:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256' width='256' height='256'%3E%3Cpath fill='black' d='M117.18 188.74a12 12 0 0 1 0 17l-5.12 5.12A58.26 58.26 0 0 1 70.6 228a58.62 58.62 0 0 1-41.46-100.08l34.75-34.75a58.64 58.64 0 0 1 98.56 28.11a12 12 0 1 1-23.37 5.44a34.65 34.65 0 0 0-58.22-16.58l-34.75 34.75A34.62 34.62 0 0 0 70.57 204a34.4 34.4 0 0 0 24.49-10.14l5.11-5.12a12 12 0 0 1 17.01 0M226.83 45.17a58.65 58.65 0 0 0-82.93 0l-5.11 5.11a12 12 0 0 0 17 17l5.12-5.12a34.63 34.63 0 1 1 49 49l-34.81 34.7A34.4 34.4 0 0 1 150.61 156a34.63 34.63 0 0 1-33.69-26.72a12 12 0 0 0-23.38 5.44A58.64 58.64 0 0 0 150.56 180h.05a58.28 58.28 0 0 0 41.47-17.17l34.75-34.75a58.62 58.62 0 0 0 0-82.91'/%3E%3C/svg%3E")}:where(.i-ph\:magnifying-glass-bold){display:inline-block;width:1em;height:1em;background-color:currentColor;-webkit-mask-image:var(--svg);mask-image:var(--svg);-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:100% 100%;mask-size:100% 100%;--svg:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256' width='256' height='256'%3E%3Cpath fill='black' d='M232.49 215.51L185 168a92.12 92.12 0 1 0-17 17l47.53 47.54a12 12 0 0 0 17-17ZM44 112a68 68 0 1 1 68 68a68.07 68.07 0 0 1-68-68'/%3E%3C/svg%3E")}:where(.i-ph\:monitor-bold){display:inline-block;width:1em;height:1em;background-color:currentColor;-webkit-mask-image:var(--svg);mask-image:var(--svg);-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:100% 100%;mask-size:100% 100%;--svg:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256' width='256' height='256'%3E%3Cpath fill='black' d='M208 36H48a28 28 0 0 0-28 28v112a28 28 0 0 0 28 28h160a28 28 0 0 0 28-28V64a28 28 0 0 0-28-28m4 140a4 4 0 0 1-4 4H48a4 4 0 0 1-4-4V64a4 4 0 0 1 4-4h160a4 4 0 0 1 4 4Zm-40 52a12 12 0 0 1-12 12H96a12 12 0 0 1 0-24h64a12 12 0 0 1 12 12'/%3E%3C/svg%3E")}:where(.i-ph\:moon-bold){display:inline-block;width:1em;height:1em;background-color:currentColor;-webkit-mask-image:var(--svg);mask-image:var(--svg);-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:100% 100%;mask-size:100% 100%;--svg:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256' width='256' height='256'%3E%3Cpath fill='black' d='M236.37 139.4a12 12 0 0 0-12-3A84.07 84.07 0 0 1 119.6 31.59a12 12 0 0 0-15-15a108.86 108.86 0 0 0-54.91 38.48A108 108 0 0 0 136 228a107.1 107.1 0 0 0 64.93-21.69a108.86 108.86 0 0 0 38.44-54.94a12 12 0 0 0-3-11.97m-49.88 47.74A84 84 0 0 1 68.86 69.51a84.9 84.9 0 0 1 23.41-21.22Q92 52.13 92 56a108.12 108.12 0 0 0 108 108q3.87 0 7.71-.27a84.8 84.8 0 0 1-21.22 23.41'/%3E%3C/svg%3E")}:where(.i-ph\:newspaper-bold){display:inline-block;width:1em;height:1em;background-color:currentColor;-webkit-mask-image:var(--svg);mask-image:var(--svg);-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:100% 100%;mask-size:100% 100%;--svg:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256' width='256' height='256'%3E%3Cpath fill='black' d='M92 108a12 12 0 0 1 12-12h72a12 12 0 0 1 0 24h-72a12 12 0 0 1-12-12m12 52h72a12 12 0 0 0 0-24h-72a12 12 0 0 0 0 24m132-96v120a28 28 0 0 1-28 28H36a32 32 0 0 1-32-32V88a12 12 0 0 1 24 0v92a8 8 0 0 0 16 0V64a20 20 0 0 1 20-20h152a20 20 0 0 1 20 20m-24 4H68v112a32 32 0 0 1-1 8h141a4 4 0 0 0 4-4Z'/%3E%3C/svg%3E")}:where(.i-ph\:paragraph-bold){display:inline-block;width:1em;height:1em;background-color:currentColor;-webkit-mask-image:var(--svg);mask-image:var(--svg);-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:100% 100%;mask-size:100% 100%;--svg:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256' width='256' height='256'%3E%3Cpath fill='black' d='M208 36H96a68 68 0 0 0 0 136h36v36a12 12 0 0 0 24 0V60h16v148a12 12 0 0 0 24 0V60h12a12 12 0 0 0 0-24m-76 112H96a44 44 0 0 1 0-88h36Z'/%3E%3C/svg%3E")}:where(.i-ph\:rss-simple-bold){display:inline-block;width:1em;height:1em;background-color:currentColor;-webkit-mask-image:var(--svg);mask-image:var(--svg);-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:100% 100%;mask-size:100% 100%;--svg:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256' width='256' height='256'%3E%3Cpath fill='black' d='M228 192a12 12 0 0 1-24 0c0-77.2-62.8-140-140-140a12 12 0 0 1 0-24c90.43 0 164 73.57 164 164M64 100a12 12 0 0 0 0 24a68.07 68.07 0 0 1 68 68a12 12 0 0 0 24 0a92.1 92.1 0 0 0-92-92m4 72a16 16 0 1 0 16 16a16 16 0 0 0-16-16'/%3E%3C/svg%3E")}:where(.i-ph\:share-bold){display:inline-block;width:1em;height:1em;background-color:currentColor;-webkit-mask-image:var(--svg);mask-image:var(--svg);-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:100% 100%;mask-size:100% 100%;--svg:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256' width='256' height='256'%3E%3Cpath fill='black' d='m232.49 112.49l-48 48a12 12 0 0 1-17-17L195 116h-30a84 84 0 0 0-81.36 63a12 12 0 1 1-23.24-6A107.94 107.94 0 0 1 165 92h30l-27.49-27.52a12 12 0 0 1 17-17l48 48a12 12 0 0 1-.02 17.01M192 204H44V88a12 12 0 0 0-24 0v128a12 12 0 0 0 12 12h160a12 12 0 0 0 0-24'/%3E%3C/svg%3E")}:where(.i-ph\:sidebar-duotone){display:inline-block;width:1em;height:1em;background-color:currentColor;-webkit-mask-image:var(--svg);mask-image:var(--svg);-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:100% 100%;mask-size:100% 100%;--svg:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256' width='256' height='256'%3E%3Cg fill='black'%3E%3Cpath d='M88 48v160H40a8 8 0 0 1-8-8V56a8 8 0 0 1 8-8Z' opacity='.2'/%3E%3Cpath d='M216 40H40a16 16 0 0 0-16 16v144a16 16 0 0 0 16 16h176a16 16 0 0 0 16-16V56a16 16 0 0 0-16-16M40 152h16a8 8 0 0 0 0-16H40v-16h16a8 8 0 0 0 0-16H40V88h16a8 8 0 0 0 0-16H40V56h40v144H40Zm176 48H96V56h120z'/%3E%3C/g%3E%3C/svg%3E")}:where(.i-ph\:subway-bold){display:inline-block;width:1em;height:1em;background-color:currentColor;-webkit-mask-image:var(--svg);mask-image:var(--svg);-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:100% 100%;mask-size:100% 100%;--svg:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256' width='256' height='256'%3E%3Cpath fill='black' d='M228 96v112a12 12 0 0 1-24 0V96a52.06 52.06 0 0 0-52-52h-48a52.06 52.06 0 0 0-52 52v112a12 12 0 0 1-24 0V96a76.08 76.08 0 0 1 76-76h48a76.08 76.08 0 0 1 76 76m-40 0v72a28 28 0 0 1-18.89 26.47l2 5.07a12 12 0 0 1-6.68 15.6a11.9 11.9 0 0 1-4.43.86a12 12 0 0 1-11.14-7.54l-5-12.46h-31.74l-5 12.46A12 12 0 0 1 96 216a11.9 11.9 0 0 1-4.46-.86a12 12 0 0 1-6.68-15.6l2-5.07A28 28 0 0 1 68 168V96a28 28 0 0 1 28-28h64a28 28 0 0 1 28 28m-96 0v36h72V96a4 4 0 0 0-4-4H96a4 4 0 0 0-4 4m72 72v-12h-24v16h20a4 4 0 0 0 4-4m-48 4v-16H92v12a4 4 0 0 0 4 4Z'/%3E%3C/svg%3E")}:where(.i-ph\:sun-bold){display:inline-block;width:1em;height:1em;background-color:currentColor;-webkit-mask-image:var(--svg);mask-image:var(--svg);-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:100% 100%;mask-size:100% 100%;--svg:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256' width='256' height='256'%3E%3Cpath fill='black' d='M116 36V20a12 12 0 0 1 24 0v16a12 12 0 0 1-24 0m80 92a68 68 0 1 1-68-68a68.07 68.07 0 0 1 68 68m-24 0a44 44 0 1 0-44 44a44.05 44.05 0 0 0 44-44M51.51 68.49a12 12 0 1 0 17-17l-12-12a12 12 0 0 0-17 17Zm0 119l-12 12a12 12 0 0 0 17 17l12-12a12 12 0 1 0-17-17M196 72a12 12 0 0 0 8.49-3.51l12-12a12 12 0 0 0-17-17l-12 12A12 12 0 0 0 196 72m8.49 115.51a12 12 0 0 0-17 17l12 12a12 12 0 0 0 17-17ZM48 128a12 12 0 0 0-12-12H20a12 12 0 0 0 0 24h16a12 12 0 0 0 12-12m80 80a12 12 0 0 0-12 12v16a12 12 0 0 0 24 0v-16a12 12 0 0 0-12-12m108-92h-16a12 12 0 0 0 0 24h16a12 12 0 0 0 0-24'/%3E%3C/svg%3E")}:where(.i-ph\:user-circle-bold){display:inline-block;width:1em;height:1em;background-color:currentColor;-webkit-mask-image:var(--svg);mask-image:var(--svg);-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:100% 100%;mask-size:100% 100%;--svg:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256' width='256' height='256'%3E%3Cpath fill='black' d='M128 20a108 108 0 1 0 108 108A108.12 108.12 0 0 0 128 20M79.57 196.57a60 60 0 0 1 96.86 0a83.72 83.72 0 0 1-96.86 0M100 120a28 28 0 1 1 28 28a28 28 0 0 1-28-28m94 59.94a83.5 83.5 0 0 0-29-23.42a52 52 0 1 0-74 0a83.5 83.5 0 0 0-29 23.42a84 84 0 1 1 131.9 0Z'/%3E%3C/svg%3E")}:where(.i-ri\:creative-commons-line){display:inline-block;width:1em;height:1em;background-color:currentColor;-webkit-mask-image:var(--svg);mask-image:var(--svg);-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:100% 100%;mask-size:100% 100%;--svg:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'%3E%3Cpath fill='black' d='M9 8c1.104 0 2.105.448 2.829 1.173l-1.414 1.413a2 2 0 1 0 0 2.828l1.413 1.414A4.001 4.001 0 0 1 5 12c0-2.208 1.792-4 4-4m9.829 1.173A4.001 4.001 0 0 0 12 12a4.001 4.001 0 0 0 6.828 2.828l-1.414-1.414a2 2 0 1 1 0-2.828zM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12m10-8a8 8 0 1 0 0 16a8 8 0 0 0 0-16'/%3E%3C/svg%3E")}:where(.i-ri\:qq-line){display:inline-block;width:1em;height:1em;background-color:currentColor;-webkit-mask-image:var(--svg);mask-image:var(--svg);-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:100% 100%;mask-size:100% 100%;--svg:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'%3E%3Cpath fill='black' d='m17.536 12.514l-.696-1.796c0-.021.01-.375.01-.558C16.85 7.088 15.447 4 12 4s-4.848 3.088-4.848 6.16c0 .183.009.537.01.557l-.696 1.797c-.19.515-.38 1.05-.517 1.51c-.657 2.189-.444 3.095-.282 3.115c.348.043 1.354-1.648 1.354-1.648c0 .98.487 2.258 1.542 3.18c-.394.127-.878.32-1.188.557c-.28.214-.245.431-.194.52c.22.385 3.79.245 4.82.125c1.03.12 4.599.26 4.82-.126c.05-.088.085-.305-.194-.519c-.311-.237-.795-.43-1.19-.556c1.055-.923 1.542-2.202 1.542-3.181c0 0 1.007 1.691 1.355 1.648c.162-.02.378-.928-.283-3.116a27 27 0 0 0-.516-1.509m1.021 8.227c-.373.652-.833.892-1.438 1.057a5 5 0 0 1-.794.138c-.44.045-.986.065-1.613.064a33 33 0 0 1-2.71-.116c-.692.065-1.785.114-2.71.116a16 16 0 0 1-1.614-.064a5 5 0 0 1-.793-.138c-.605-.164-1.065-.405-1.44-1.059a2.27 2.27 0 0 1-.239-1.652c-.592-.132-1.001-.482-1.279-.911a2.4 2.4 0 0 1-.309-.71a4 4 0 0 1-.116-1.106c.013-.785.187-1.762.532-2.912c.14-.466.327-1.008.567-1.655l.554-1.43l-.002-.203C5.153 5.605 7.589 2 12 2c4.413 0 6.848 3.605 6.848 8.16l-.001.203l.553 1.43l.01.026c.225.606.413 1.153.556 1.626c.348 1.15.522 2.128.535 2.916q.012.61-.118 1.108c-.066.246-.161.48-.31.708c-.276.427-.684.776-1.277.91c.13.554.055 1.14-.24 1.654'/%3E%3C/svg%3E")}:where(.i-simple-icons\:nuxtdotjs){display:inline-block;width:1em;height:1em;background-color:currentColor;-webkit-mask-image:var(--svg);mask-image:var(--svg);-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:100% 100%;mask-size:100% 100%;--svg:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'%3E%3Cpath fill='black' d='M13.464 19.83h8.922c.283 0 .562-.073.807-.21a1.6 1.6 0 0 0 .591-.574a1.53 1.53 0 0 0 .216-.783a1.53 1.53 0 0 0-.217-.782L17.792 7.414a1.6 1.6 0 0 0-.591-.573a1.65 1.65 0 0 0-.807-.21c-.283 0-.562.073-.807.21a1.6 1.6 0 0 0-.59.573L13.463 9.99L10.47 4.953a1.6 1.6 0 0 0-.591-.573a1.65 1.65 0 0 0-.807-.21c-.284 0-.562.073-.807.21a1.6 1.6 0 0 0-.591.573L.216 17.481a1.53 1.53 0 0 0-.217.782c0 .275.074.545.216.783a1.6 1.6 0 0 0 .59.574c.246.137.525.21.808.21h5.6c2.22 0 3.856-.946 4.982-2.79l2.733-4.593l1.464-2.457l4.395 7.382h-5.859Zm-6.341-2.46l-3.908-.002l5.858-9.842l2.923 4.921l-1.957 3.29c-.748 1.196-1.597 1.632-2.916 1.632'/%3E%3C/svg%3E")}:where(.i-solar\:rewind-back-bold-duotone){display:inline-block;width:1em;height:1em;background-color:currentColor;-webkit-mask-image:var(--svg);mask-image:var(--svg);-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:100% 100%;mask-size:100% 100%;--svg:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'%3E%3Cpath fill='black' fill-rule='evenodd' d='M22 6.426v11.148c0 1.847-1.6 3.015-2.903 2.118L13 15.232V8.768l6.097-4.46C20.399 3.411 22 4.58 22 6.426' clip-rule='evenodd' opacity='.5'/%3E%3Cpath fill='black' d='M13 7.123v9.754c0 1.616-1.467 2.638-2.661 1.853L2.92 13.853c-1.228-.807-1.228-2.899 0-3.706l7.42-4.877c1.193-.785 2.66.237 2.66 1.853'/%3E%3C/svg%3E")}:where(.i-solar\:rewind-forward-bold-duotone){display:inline-block;width:1em;height:1em;background-color:currentColor;-webkit-mask-image:var(--svg);mask-image:var(--svg);-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:100% 100%;mask-size:100% 100%;--svg:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'%3E%3Cpath fill='black' fill-rule='evenodd' d='M2 6.426v11.148c0 1.847 1.6 3.015 2.903 2.118L11 15.232V8.768l-6.097-4.46C3.601 3.411 2 4.58 2 6.426' clip-rule='evenodd' opacity='.5'/%3E%3Cpath fill='black' d='M11 7.123v9.754c0 1.616 1.467 2.638 2.661 1.853l7.418-4.877c1.228-.807 1.228-2.899 0-3.706L13.66 5.27C12.467 4.485 11 5.507 11 7.123'/%3E%3C/svg%3E")}</style><link rel="modulepreload" as="script" crossorigin href="/_nuxt/raXDgERY.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/Dkj_qHQx.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/CN1T09XU.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/Dj2IyaG6.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/DUI5qfz0.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/CS7__6sN.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/CING10YA.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/rJCbAzvX.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/BbMOdRHw.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/BbvJvVG1.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/xFg6T9EQ.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/Yza7fqXX.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/BX82KQmb.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/DPhMBn0i.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/CJD5SA27.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/CWR-TKAJ.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/Co_YU8RA.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/nd40dhUu.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/Cf0BHinq.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/l4-Y4khN.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/BOMktavK.js"><link rel="preload" as="fetch" fetchpriority="low" crossorigin="anonymous" href="/_nuxt/builds/meta/89003721-fc0f-4366-b280-857afaca1928.json"><script src="https://lib.baomitu.com/twikoo/1.6.44/twikoo.min.js" defer></script><link rel="prefetch" as="style" crossorigin href="/_nuxt/Search.Cw6TbFYv.css"><link rel="prefetch" as="script" crossorigin href="/_nuxt/BTSAGta7.js"><link rel="prefetch" as="style" crossorigin href="/_nuxt/ArchiveLog.CYztPBWW.css"><link rel="prefetch" as="script" crossorigin href="/_nuxt/C5BRbDif.js"><link rel="prefetch" as="style" crossorigin href="/_nuxt/BlogLog.CG2qgSUC.css"><link rel="prefetch" as="script" crossorigin href="/_nuxt/1WHE7-Go.js"><link rel="prefetch" as="style" crossorigin href="/_nuxt/BlogStats.Bxr2IP2e.css"><link rel="prefetch" as="script" crossorigin href="/_nuxt/B-KsPHHe.js"><link rel="prefetch" as="script" crossorigin href="/_nuxt/fHJKm3TX.js"><link rel="prefetch" as="style" crossorigin href="/_nuxt/Connectivity.CVGrJyNH.css"><link rel="prefetch" as="script" crossorigin href="/_nuxt/CqJ779zG.js"><link rel="prefetch" as="script" crossorigin href="/_nuxt/DxKiCPIj.js"><link rel="prefetch" as="style" crossorigin href="/_nuxt/FeaturedArticles.Ng3U_wCH.css"><link rel="prefetch" as="script" crossorigin href="/_nuxt/Lm0H2pqf.js"><link rel="prefetch" as="script" crossorigin href="/_nuxt/DPLQhXWN.js"><link rel="prefetch" as="style" crossorigin href="/_nuxt/GithubCard.B7pr8JCM.css"><link rel="prefetch" as="script" crossorigin href="/_nuxt/XmA-W0YV.js"><link rel="prefetch" as="style" crossorigin href="/_nuxt/JikeLog.BQWv2xh2.css"><link rel="prefetch" as="script" crossorigin href="/_nuxt/DUcwk71R.js"><link rel="prefetch" as="style" crossorigin href="/_nuxt/NewsBlogStats.B_z-xFM9.css"><link rel="prefetch" as="script" crossorigin href="/_nuxt/BkSBmzrd.js"><link rel="prefetch" as="style" crossorigin href="/_nuxt/NewsTimeline.CIA-VOu1.css"><link rel="prefetch" as="script" crossorigin href="/_nuxt/B73JXxFt.js"><link rel="prefetch" as="style" crossorigin href="/_nuxt/Timeline.DVs2q-xH.css"><link rel="prefetch" as="script" crossorigin href="/_nuxt/D6G26jdx.js"><link rel="prefetch" as="style" crossorigin href="/_nuxt/Weather.ParjHhzv.css"><link rel="prefetch" as="script" crossorigin href="/_nuxt/CO7HNDHH.js"><link rel="prefetch" as="script" crossorigin href="/_nuxt/CIF3D_B3.js"><link rel="prefetch" as="script" crossorigin href="/_nuxt/deGonkTA.js"><link rel="prefetch" as="script" crossorigin href="/_nuxt/q-j0iyEw.js"><link rel="prefetch" as="script" crossorigin href="/_nuxt/DVMEJ2y_.js"><link rel="prefetch" as="script" crossorigin href="/_nuxt/ConhrzKn.js"><link rel="icon" href="https://www.luochenup.xyz/b_a5a3aa888355bdc617dca021efb19ab8.png"><link rel="alternate" type="application/atom+xml" href="/atom.xml"><meta name="author" content="落尘up, 969488647@qq.com"><meta name="generator" content="zhilu-blog" data-github-repo="https://github.com/L33Z22L11/blog-v3" data-version="3.3.4"><meta name="mobile-web-app-capable" content="yes"><meta property="og:type" content="article"><meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"><meta property="og:image" content="https://www.luochenup.xyz/Canvas-Ruom.webp"><meta name="description" content="Cursor 是基于 VS Code 开发的一款编辑器，它在保留 VS Code 强大功能和熟悉操作体验的同时，专注于集成 AI 技术，帮助开发者更高效地编写代码。"><script type="module" src="/_nuxt/raXDgERY.js" crossorigin></script><meta name="twitter:card" content="summary_large_image"><meta property="og:title" data-infer="" content="实战Cursor | 落尘up"><meta property="og:description" data-infer="" content="Cursor 是基于 VS Code 开发的一款编辑器，它在保留 VS Code 强大功能和熟悉操作体验的同时，专注于集成 AI 技术，帮助开发者更高效地编写代码。"><link rel="canonical" href="https://www.luochen.chat/2025/cursor"><meta property="og:url" content="https://www.luochen.chat/2025/cursor"><meta property="og:locale" content="zh_CN"><meta property="og:site_name" content="落尘up"><script id="unhead:payload" type="application/json">{"templateParams":{"separator":"|"},"titleTemplate":"%s %separator 落尘up"}</script><script>"use strict";(()=>{const t=window,e=document.documentElement,c=["dark","light"],n=getStorageValue("localStorage","nuxt-color-mode")||"system";let i=n==="system"?u():n;const r=e.getAttribute("data-color-mode-forced");r&&(i=r),l(i),t["__NUXT_COLOR_MODE__"]={preference:n,value:i,getColorScheme:u,addColorScheme:l,removeColorScheme:d};function l(o){const s=""+o+"",a="";e.classList?e.classList.add(s):e.className+=" "+s,a&&e.setAttribute("data-"+a,o)}function d(o){const s=""+o+"",a="";e.classList?e.classList.remove(s):e.className=e.className.replace(new RegExp(s,"g"),""),a&&e.removeAttribute("data-"+a)}function f(o){return t.matchMedia("(prefers-color-scheme"+o+")")}function u(){if(t.matchMedia&&f("").media!=="not all"){for(const o of c)if(f(":"+o).matches)return o}return"light"}})();function getStorageValue(t,e){switch(t){case"localStorage":return window.localStorage.getItem(e);case"sessionStorage":return window.sessionStorage.getItem(e);case"cookie":return getCookie(e);default:return null}}function getCookie(t){const c=("; "+window.document.cookie).split("; "+t+"=");if(c.length===2)return c.pop()?.split(";").shift()}</script><script>!function(o,t){const a=o.map(atob),e=atob(t),n=document.querySelector('link[rel="canonical"]');a.some(o=>location.hostname.endsWith(o))&&(n&&(n.href=n.href.replace(location.host,e)),location.host=e)}(["ZGdqbHguY29t","ZGd2aHF0LmNvbQ==","aGNtc2xhLmNvbQ==","d21sb3AuY29t","eXN3anhzLmNvbQ=="],"d3d3Lmx1b2NoZW4uY2hhdA==");</script></head><body><div id="z-root"><!--[--><div class="nuxt-loading-indicator" style="position:fixed;top:0;right:0;left:0;pointer-events:none;width:auto;height:3px;opacity:0;background:repeating-linear-gradient(to right,#00dc82 0%,#34cdfe 50%,#0047e1 100%);background-size:Infinity% auto;transform:scaleX(0%);transform-origin:left;transition:transform 0.1s, height 0.4s, opacity 0.4s;z-index:999999;"></div><a href="#main-content" class="skip-link gradient-card active" data-v-8fdfd33d> 跳转到主要内容 / Skip to content </a><!--[--><!----><aside id="z-sidebar" class="" data-v-66394818><a href="/" class="zhilu-header sidebar-header" data-v-66394818 data-v-5076feb3><!--[--><div class="emoji-tail" data-v-5076feb3><!--[--><span class="splitted-char" style="--delay:-3s;" data-v-5076feb3>💻</span><span class="splitted-char" style="--delay:-2.4s;" data-v-5076feb3>📖</span><span class="splitted-char" style="--delay:-1.8s;" data-v-5076feb3>☕️</span><span class="splitted-char" style="--delay:-1.2000000000000002s;" data-v-5076feb3>💭</span><span class="splitted-char" style="--delay:-0.6000000000000001s;" data-v-5076feb3>🌙</span><!--]--></div><img onerror="this.setAttribute(&#39;data-error&#39;, 1)" alt="落尘up" data-nuxt-img srcset="/_ipx/q_85/img/avatar.png 1x, /_ipx/q_85/img/avatar.png 2x" class="zhilu-logo circle" src="/_ipx/q_85/img/avatar.png" data-v-5076feb3><div class="zhilu-text" data-v-5076feb3><div class="header-title" data-v-5076feb3><!--[--><span class="splitted-char" style="--delay:0.1s;" data-v-5076feb3>落</span><span class="splitted-char" style="--delay:0.2s;" data-v-5076feb3>尘</span><span class="splitted-char" style="--delay:0.30000000000000004s;" data-v-5076feb3>u</span><span class="splitted-char" style="--delay:0.4s;" data-v-5076feb3>p</span><!--]--></div><div class="header-subtitle" data-v-5076feb3>愿你我都做,生活的高手。</div></div><!--]--></a><nav class="sidebar-nav scrollcheck-y" data-v-66394818><div class="search-btn sidebar-nav-item gradient-card" data-v-66394818><span class="iconify i-ph:magnifying-glass-bold icon" aria-hidden="true" style="" data-v-66394818></span><span class="nav-text" data-v-66394818>搜索</span><span class="keycut widescreen-only" data-v-66394818>Ctrl+K</span></div><!--[--><!--[--><!----><menu data-v-66394818><!--[--><li data-v-66394818><a href="/about" class="sidebar-nav-item" data-v-66394818><!--[--><span class="iconify i-ph:user-circle-bold icon" aria-hidden="true" style="" data-v-66394818></span><span class="nav-text" data-v-66394818>我说</span><!----><!--]--></a></li><li data-v-66394818><a href="/" class="sidebar-nav-item" data-v-66394818><!--[--><span class="iconify i-ph:files-bold icon" aria-hidden="true" style="" data-v-66394818></span><span class="nav-text" data-v-66394818>文章</span><!----><!--]--></a></li><li data-v-66394818><a href="/news" class="sidebar-nav-item" data-v-66394818><!--[--><span class="iconify i-ph:newspaper-bold icon" aria-hidden="true" style="" data-v-66394818></span><span class="nav-text" data-v-66394818>阅闻</span><!----><!--]--></a></li><li data-v-66394818><a href="/novel" class="sidebar-nav-item" data-v-66394818><!--[--><span class="iconify i-ph:book-open-bold icon" aria-hidden="true" style="" data-v-66394818></span><span class="nav-text" data-v-66394818>说说</span><!----><!--]--></a></li><li data-v-66394818><a href="/archive" class="sidebar-nav-item" data-v-66394818><!--[--><span class="iconify i-ph:archive-bold icon" aria-hidden="true" style="" data-v-66394818></span><span class="nav-text" data-v-66394818>归档</span><!----><!--]--></a></li><li data-v-66394818><a href="/link" class="sidebar-nav-item" data-v-66394818><!--[--><span class="iconify i-ph:link-bold icon" aria-hidden="true" style="" data-v-66394818></span><span class="nav-text" data-v-66394818>友链</span><!----><!--]--></a></li><!--]--></menu><!--]--><!--]--></nav><footer class="sidebar-footer" data-v-66394818><div class="theme-toggle" data-v-66394818 data-v-e7a12ec1><!--[--><button aria-label="浅色模式" class="" data-v-e7a12ec1><span class="iconify i-ph:sun-bold icon" aria-hidden="true" style="" data-v-e7a12ec1></span></button><button aria-label="跟随系统" class="active" data-v-e7a12ec1><span class="iconify i-ph:monitor-bold icon" aria-hidden="true" style="" data-v-e7a12ec1></span></button><button aria-label="深色模式" class="" data-v-e7a12ec1><span class="iconify i-ph:moon-bold icon" aria-hidden="true" style="" data-v-e7a12ec1></span></button><!--]--></div><menu data-v-66394818 data-v-915035bb><!--[--><a href="https://www.luochen.chat/" rel="noopener noreferrer" target="_blank" aria-label="个人主页" data-v-915035bb><!--[--><span class="iconify i-ph:house-bold icon" aria-hidden="true" style="" data-v-915035bb></span><!--]--></a><a href="tencent://AddContact/?fromId=50&amp;fromSubId=1&amp;subcmd=all&amp;uin=969488647" rel="noopener noreferrer" target="_blank" aria-label="QQ: 969488647" data-v-915035bb><!--[--><span class="iconify i-ri:qq-line icon" aria-hidden="true" style="" data-v-915035bb></span><!--]--></a><a href="https://github.com/luochenup" rel="noopener noreferrer" target="_blank" aria-label="github" data-v-915035bb><!--[--><span class="iconify i-ph:github-logo-bold icon" aria-hidden="true" style="" data-v-915035bb></span><!--]--></a><a href="/atom.xml" rel="noopener noreferrer" target="_blank" aria-label="Atom订阅" data-v-915035bb><!--[--><span class="iconify i-ph:rss-simple-bold icon" aria-hidden="true" style="" data-v-915035bb></span><!--]--></a><!--]--></menu></footer></aside><!--]--><div id="content"><main id="main-content"><!--[--><div class="post-header has-cover" data-v-87b84342 data-v-67d0fc08><img onerror="this.setAttribute(&#39;data-error&#39;, 1)" alt="实战Cursor" data-nuxt-img srcset="/_ipx/q_85/https:/www.luochenup.xyz/Canvas-Ruom.webp 1x, /_ipx/q_85/https:/www.luochenup.xyz/Canvas-Ruom.webp 2x" class="post-cover" src="/_ipx/q_85/https:/www.luochenup.xyz/Canvas-Ruom.webp" data-v-67d0fc08><div class="post-nav" data-v-67d0fc08><div class="operations" data-v-67d0fc08><button class="button" data-v-67d0fc08 data-v-e363985c><div class="button-main" data-v-e363985c><span class="iconify i-ph:share-bold icon" aria-hidden="true" style="" data-v-e363985c></span><!--[--> 文字分享 <!--]--></div><!----></button></div><div class="post-info" data-v-67d0fc08><time datetime="2025-08-23T18:16:02.000Z" data-v-67d0fc08><span class="iconify i-ph:calendar-dots-bold icon" aria-hidden="true" style="" data-v-67d0fc08></span> 8月24日</time><time datetime="2025-08-23T20:27:42.000Z" data-v-67d0fc08><span class="iconify i-ph:calendar-plus-bold icon" aria-hidden="true" style="" data-v-67d0fc08></span> 8月24日</time><span class="article-category" data-v-67d0fc08><span class="iconify i-ph:code-bold icon" aria-hidden="true" style="" data-v-67d0fc08></span> 代码</span><span class="wordcount" data-v-67d0fc08><span class="iconify i-ph:paragraph-bold icon" aria-hidden="true" style="" data-v-67d0fc08></span> 2940 字 </span></div></div><h1 class="text-tech post-title" data-v-67d0fc08>实战Cursor</h1></div><div class="md-excerpt gradient-card" data-v-87b84342 data-v-bf7538b0><span class="iconify i-ph:highlighter-bold icon" aria-hidden="true" style="" data-v-bf7538b0></span></div><article class="article md-tech" data-v-87b84342><h1 id="什么是cursor"><!--[-->什么是Cursor<!--]--></h1><p><!--[-->Cursor 是基于 <a href="https://code.visualstudio.com" rel="nofollow" target="_blank" class="z-link" data-v-3dea6575><!--[--><!----><!--[-->VS Code<!--]--><!--]--></a> 开发的一款编辑器，它在保留 VS Code 强大功能和熟悉操作体验的同时，专注于集成 AI 技术，帮助开发者更高效地编写代码。<!--]--></p><h1 id="主界面介绍"><!--[-->主界面介绍<!--]--></h1><p><!--[-->关于如何安装，注册，可参考各种视频进行下载学习，如下展示Cursor 界面的组成部分<!--]--></p><p><!--[--><img onerror="this.setAttribute(&#39;data-error&#39;, 1)" alt="image-20250602143401522" data-nuxt-img srcset="/_ipx/q_85/https:/luochenup.xyz/image-20250602143401522.png 1x, /_ipx/q_85/https:/luochenup.xyz/image-20250602143401522.png 2x" src="/_ipx/q_85/https:/luochenup.xyz/image-20250602143401522.png"><!--]--></p><h1 id="ai-代码生成实践"><!--[-->AI 代码生成实践<!--]--></h1><h2 id="背景"><a href="#背景"><!--[-->背景<!--]--></a></h2><p><!--[-->依据<a href="https://www.luochenup.top/2025/05/27/Sring%20Ai/" rel="nofollow" target="_blank" class="z-link" data-v-3dea6575><!--[--><!----><!--[-->sping ai 文档<!--]--><!--]--></a>，已经可以初步调用ai的api进行自定义，但是实际的输出很单调，而且每次都需要在地址框输入自己的message很繁琐，希望可以达到deepseek的方式，能够一直交互式的咨询，开发一个属于自己的gpt<!--]--></p><p><!--[--><img onerror="this.setAttribute(&#39;data-error&#39;, 1)" alt="image-20250602144230984" data-nuxt-img srcset="/_ipx/q_85/https:/luochenup.xyz/image-20250602144230984.png 1x, /_ipx/q_85/https:/luochenup.xyz/image-20250602144230984.png 2x" src="/_ipx/q_85/https:/luochenup.xyz/image-20250602144230984.png"><!--]--></p><h2 id="上手cursor"><a href="#上手cursor"><!--[-->上手cursor<!--]--></a></h2><p><!--[-->话不多说，我们直接实战cursor进行适配，让ai帮我们写一个属于自己的ai“世界”：<!--]--></p><h3 id="首次对话"><a href="#首次对话"><!--[-->首次对话<!--]--></a></h3><p><!--[--><strong><!--[-->User<!--]--></strong><!--]--></p><p><!--[-->帮我生成一个ai界面，类似deepseek的界面，后端ai接口调用为@<a href="http://127.0.0.1:8899/ais" rel="nofollow" target="_blank" class="z-link" data-v-3dea6575><!--[--><!----><!--[-->http://127.0.0.1:8899/ais<!--]--><!--]--></a> 参数为message，message的值为我输入的文本<!--]--></p><p><!--[--><strong><!--[-->Cursor<!--]--></strong><!--]--></p><p><!--[-->我会帮您创建一个类似 Deepseek 的 AI 聊天界面。我们将使用 React 来构建前端，并创建一个美观的现代化界面。让我们一步步来实现这个项目。<!--]--></p><p><!--[-->首先，我需要检查项目结构。<!--]--></p><p><!--[-->看起来这是一个全新的项目。我们需要创建一个新的 React 项目。我将使用 Vite 来创建项目，因为它更快速和现代。<!--]--></p><p><!--[-->现在让我们安装必要的依赖：<!--]--></p><p><!--[-->现在我将创建必要的文件和组件。首先，让我们修改主应用文件：<!--]--></p><figure class="z-codeblock" style="--collapsible-height:16em;" data-v-19f013c9><figcaption data-v-19f013c9><span data-v-19f013c9></span><span class="language" data-v-19f013c9>typescriptreact</span><div class="operations" data-v-19f013c9><button data-v-19f013c9>自动换行</button><button data-v-19f013c9>复制</button></div></figcaption><pre class="language-typescriptreact shiki scrollcheck-x" data-v-19f013c9>import { ChakraProvider, Box, Container } from &#039;@chakra-ui/react&#039;
+import Chat from &#039;./components/Chat&#039;
+
+function App() {
+  return (
+    &lt;ChakraProvider&gt;
+      &lt;Box minH=&quot;100vh&quot; bg=&quot;gray.50&quot;&gt;
+        &lt;Container maxW=&quot;container.lg&quot; py={8}&gt;
+          &lt;Chat /&gt;
+        &lt;/Container&gt;
+      &lt;/Box&gt;
+    &lt;/ChakraProvider&gt;
+  )
+}
+
+export default App
+</pre><!----></figure><p><!--[-->现在让我们创建聊天组件：<!--]--></p><figure class="z-codeblock collapsed collapsible" style="--collapsible-height:16em;" data-v-19f013c9><figcaption data-v-19f013c9><span data-v-19f013c9></span><span class="language" data-v-19f013c9>typescriptreact</span><div class="operations" data-v-19f013c9><button data-v-19f013c9>自动换行</button><button data-v-19f013c9>复制</button></div></figcaption><pre class="language-typescriptreact shiki scrollcheck-x" data-v-19f013c9>import { useState } from &#039;react&#039;
+import {
+  Box,
+  VStack,
+  Input,
+  Button,
+  HStack,
+  Text,
+  useToast,
+  Card,
+  CardBody,
+} from &#039;@chakra-ui/react&#039;
+import axios from &#039;axios&#039;
+
+interface Message {
+  role: &#039;user&#039; | &#039;assistant&#039;
+  content: string
+}
+
+const Chat = () =&gt; {
+  const [messages, setMessages] = useState&lt;Message[]&gt;([])
+  const [input, setInput] = useState(&#039;&#039;)
+  const [isLoading, setIsLoading] = useState(false)
+  const toast = useToast()
+
+  const handleSend = async () =&gt; {
+    if (!input.trim()) return
+
+    const userMessage: Message = {
+      role: &#039;user&#039;,
+      content: input,
+    }
+
+    setMessages((prev) =&gt; [...prev, userMessage])
+    setInput(&#039;&#039;)
+    setIsLoading(true)
+
+    try {
+      const response = await axios.post(&#039;http://127.0.0.1:8899/ais&#039;, {
+        message: input,
+      })
+
+      const assistantMessage: Message = {
+        role: &#039;assistant&#039;,
+        content: response.data,
+      }
+
+      setMessages((prev) =&gt; [...prev, assistantMessage])
+    } catch (error) {
+      toast({
+        title: &#039;发送失败&#039;,
+        description: &#039;无法连接到AI服务&#039;,
+        status: &#039;error&#039;,
+        duration: 3000,
+        isClosable: true,
+      })
+    } finally {
+      setIsLoading(false)
+    }
+  }
+
+  return (
+    &lt;Box&gt;
+      &lt;VStack spacing={4} align=&quot;stretch&quot; h=&quot;calc(100vh - 200px)&quot;&gt;
+        &lt;Box flex={1} overflowY=&quot;auto&quot; p={4}&gt;
+          {messages.map((message, index) =&gt; (
+            &lt;Card
+              key={index}
+              mb={4}
+              bg={message.role === &#039;user&#039; ? &#039;blue.50&#039; : &#039;green.50&#039;}
+              direction=&quot;row&quot;
+            &gt;
+              &lt;CardBody&gt;
+                &lt;Text
+                  fontSize=&quot;sm&quot;
+                  color=&quot;gray.500&quot;
+                  mb={1}
+                &gt;
+                  {message.role === &#039;user&#039; ? &#039;你&#039; : &#039;AI&#039;}
+                &lt;/Text&gt;
+                &lt;Text&gt;{message.content}&lt;/Text&gt;
+              &lt;/CardBody&gt;
+            &lt;/Card&gt;
+          ))}
+        &lt;/Box&gt;
+        &lt;HStack spacing={2} p={4} bg=&quot;white&quot; borderTop=&quot;1px&quot; borderColor=&quot;gray.200&quot;&gt;
+          &lt;Input
+            value={input}
+            onChange={(e) =&gt; setInput(e.target.value)}
+            placeholder=&quot;输入你的问题...&quot;
+            onKeyPress={(e) =&gt; {
+              if (e.key === &#039;Enter&#039;) {
+                handleSend()
+              }
+            }}
+          /&gt;
+          &lt;Button
+            colorScheme=&quot;blue&quot;
+            onClick={handleSend}
+            isLoading={isLoading}
+            loadingText=&quot;发送中&quot;
+          &gt;
+            发送
+          &lt;/Button&gt;
+        &lt;/HStack&gt;
+      &lt;/VStack&gt;
+    &lt;/Box&gt;
+  )
+}
+
+export default Chat
+</pre><button class="toggle-btn" aria-label="展开代码块" data-v-19f013c9><span class="iconify i-ph:caret-double-up-bold icon toggle-icon is-collapsed" aria-hidden="true" style="" data-v-19f013c9></span><span class="toggle-tip" data-v-19f013c9>111 行</span></button></figure><p><!--[-->让我们修复一些配置问题。首先，我们需要设置 ChakraProvider：<!--]--></p><figure class="z-codeblock" style="--collapsible-height:16em;" data-v-19f013c9><figcaption data-v-19f013c9><span data-v-19f013c9></span><span class="language" data-v-19f013c9>typescriptreact</span><div class="operations" data-v-19f013c9><button data-v-19f013c9>自动换行</button><button data-v-19f013c9>复制</button></div></figcaption><pre class="language-typescriptreact shiki scrollcheck-x" data-v-19f013c9>import React from &#039;react&#039;
+import ReactDOM from &#039;react-dom/client&#039;
+import App from &#039;./App.tsx&#039;
+import { ChakraProvider } from &#039;@chakra-ui/react&#039;
+
+ReactDOM.createRoot(document.getElementById(&#039;root&#039;)!).render(
+  &lt;React.StrictMode&gt;
+    &lt;ChakraProvider&gt;
+      &lt;App /&gt;
+    &lt;/ChakraProvider&gt;
+  &lt;/React.StrictMode&gt;,
+)
+</pre><!----></figure><p><!--[-->让我们修复 App.tsx 中的问题：<!--]--></p><figure class="z-codeblock" style="--collapsible-height:16em;" data-v-19f013c9><figcaption data-v-19f013c9><span data-v-19f013c9></span><span class="language" data-v-19f013c9>typescriptreact</span><div class="operations" data-v-19f013c9><button data-v-19f013c9>自动换行</button><button data-v-19f013c9>复制</button></div></figcaption><pre class="language-typescriptreact shiki scrollcheck-x" data-v-19f013c9>import { Box, Container } from &#039;@chakra-ui/react&#039;
+import Chat from &#039;./components/Chat&#039;
+
+function App() {
+  return (
+    &lt;Box minH=&quot;100vh&quot; bg=&quot;gray.50&quot;&gt;
+      &lt;Container maxW=&quot;container.lg&quot; py={8}&gt;
+        &lt;Chat /&gt;
+      &lt;/Container&gt;
+    &lt;/Box&gt;
+  )
+}
+
+export default App
+</pre><!----></figure><p><!--[-->现在让我们启动开发服务器：<!--]--></p><p><!--[-->我已经创建了一个类似 Deepseek 的 AI 聊天界面。以下是主要功能和特点：<!--]--></p><ol><!--[--><li><!--[-->现代化的 UI 设计：<ul><!--[--><li><!--[-->使用 Chakra UI 组件库实现清爽的界面<!--]--></li><li><!--[-->响应式布局，适配不同屏幕尺寸<!--]--></li><li><!--[-->消息气泡采用卡片式设计<!--]--></li><!--]--></ul><!--]--></li><li><!--[-->交互功能：<ul><!--[--><li><!--[-->支持文本输入和发送<!--]--></li><li><!--[-->回车键快捷发送<!--]--></li><li><!--[-->发送状态加载提示<!--]--></li><li><!--[-->错误提示（当 AI 服务不可用时）<!--]--></li><!--]--></ul><!--]--></li><li><!--[-->消息显示：<ul><!--[--><li><!--[-->用户消息和 AI 回复使用不同的背景色区分<!--]--></li><li><!--[-->消息区域支持滚动，可以查看历史对话<!--]--></li><li><!--[-->清晰的角色标识（&quot;你&quot; 和 &quot;AI&quot;）<!--]--></li><!--]--></ul><!--]--></li><li><!--[-->API 集成：<ul><!--[--><li><!--[-->已配置连接到 <code data-v-cdb8f38f><!--[-->http://127.0.0.1:8899/ais<!--]--></code> 接口<!--]--></li><li><!--[-->使用 axios 发送 POST 请求<!--]--></li><li><!--[-->请求参数格式符合要求（使用 message 字段）<!--]--></li><!--]--></ul><!--]--></li><!--]--></ol><p><!--[-->现在您可以访问 <a href="http://localhost:5173" rel="nofollow" target="_blank" class="z-link" data-v-3dea6575><!--[--><!----><!--[-->http://localhost:5173<!--]--><!--]--></a> 来查看和使用这个聊天界面。要使用它，您需要确保：<!--]--></p><ol><!--[--><li><!--[-->AI 服务在 <code data-v-cdb8f38f><!--[-->http://127.0.0.1:8899/ais<!--]--></code> 正在运行<!--]--></li><li><!--[-->服务接受 POST 请求，并期望接收 <code data-v-cdb8f38f><!--[-->message<!--]--></code> 参数<!--]--></li><li><!--[-->服务返回文本响应<!--]--></li><!--]--></ol><p><!--[-->如果您需要对界面进行任何调整或者添加新功能，请随时告诉我。<!--]--></p><h3 id="首次总结"><a href="#首次总结"><!--[-->首次总结<!--]--></a></h3><p><!--[-->cursor帮我生成的界面是无法访问的，且我给的接口为get请求，将自己的需求持续反馈给cursor，等待代码的变更<!--]--></p><h3 id="二次对话"><a href="#二次对话"><!--[-->二次对话<!--]--></a></h3><p><!--[--><strong><!--[-->User<!--]--></strong><!--]--></p><p><!--[-->我是用的是get请求，请求的参数只有message，不是post请求，而且界面运行为空<!--]--></p><p><!--[--><strong><!--[-->Cursor<!--]--></strong>
+看起来是因为 Chakra UI 的组件导入和使用有一些问题，导致界面无法正常渲染。让我们修复这些问题：<!--]--></p><figure class="z-codeblock collapsed collapsible" style="--collapsible-height:16em;" data-v-19f013c9><figcaption data-v-19f013c9><span data-v-19f013c9></span><span class="language" data-v-19f013c9>typescriptreact</span><div class="operations" data-v-19f013c9><button data-v-19f013c9>自动换行</button><button data-v-19f013c9>复制</button></div></figcaption><pre class="language-typescriptreact shiki scrollcheck-x" data-v-19f013c9>import { useState } from &#039;react&#039;
+import {
+  Box,
+  Stack,
+  Input,
+  Button,
+  Text,
+  useToast as ChakraToast,
+  Card as ChakraCard,
+  CardBody as ChakraCardBody,
+} from &#039;@chakra-ui/react&#039;
+import axios from &#039;axios&#039;
+
+interface Message {
+  role: &#039;user&#039; | &#039;assistant&#039;
+  content: string
+}
+
+const Chat = () =&gt; {
+  const [messages, setMessages] = useState&lt;Message[]&gt;([])
+  const [input, setInput] = useState(&#039;&#039;)
+  const [isLoading, setIsLoading] = useState(false)
+  const toast = ChakraToast()
+
+  const handleSend = async () =&gt; {
+    if (!input.trim()) return
+
+    const userMessage: Message = {
+      role: &#039;user&#039;,
+      content: input,
+    }
+
+    setMessages((prev) =&gt; [...prev, userMessage])
+    setInput(&#039;&#039;)
+    setIsLoading(true)
+
+    try {
+      const response = await axios.get(&#039;http://127.0.0.1:8899/ais&#039;, {
+        params: {
+          message: input
+        }
+      })
+
+      const assistantMessage: Message = {
+        role: &#039;assistant&#039;,
+        content: response.data,
+      }
+
+      setMessages((prev) =&gt; [...prev, assistantMessage])
+    } catch (error) {
+      toast({
+        title: &#039;发送失败&#039;,
+        description: &#039;无法连接到AI服务&#039;,
+        status: &#039;error&#039;,
+        duration: 3000,
+        isClosable: true,
+      })
+    } finally {
+      setIsLoading(false)
+    }
+  }
+
+  return (
+    &lt;Box&gt;
+      &lt;Stack direction=&quot;column&quot; spacing={4} h=&quot;calc(100vh - 200px)&quot;&gt;
+        &lt;Box flex={1} overflowY=&quot;auto&quot; p={4}&gt;
+          {messages.map((message, index) =&gt; (
+            &lt;ChakraCard
+              key={index}
+              mb={4}
+              bg={message.role === &#039;user&#039; ? &#039;blue.50&#039; : &#039;green.50&#039;}
+            &gt;
+              &lt;ChakraCardBody&gt;
+                &lt;Text
+                  fontSize=&quot;sm&quot;
+                  color=&quot;gray.500&quot;
+                  mb={1}
+                &gt;
+                  {message.role === &#039;user&#039; ? &#039;你&#039; : &#039;AI&#039;}
+                &lt;/Text&gt;
+                &lt;Text&gt;{message.content}&lt;/Text&gt;
+              &lt;/ChakraCardBody&gt;
+            &lt;/ChakraCard&gt;
+          ))}
+        &lt;/Box&gt;
+        &lt;Stack direction=&quot;row&quot; p={4} bg=&quot;white&quot; borderTop=&quot;1px&quot; borderColor=&quot;gray.200&quot;&gt;
+          &lt;Input
+            value={input}
+            onChange={(e) =&gt; setInput(e.target.value)}
+            placeholder=&quot;输入你的问题...&quot;
+            onKeyPress={(e) =&gt; {
+              if (e.key === &#039;Enter&#039;) {
+                handleSend()
+              }
+            }}
+          /&gt;
+          &lt;Button
+            colorScheme=&quot;blue&quot;
+            onClick={handleSend}
+            disabled={isLoading}
+          &gt;
+            {isLoading ? &#039;发送中...&#039; : &#039;发送&#039;}
+          &lt;/Button&gt;
+        &lt;/Stack&gt;
+      &lt;/Stack&gt;
+    &lt;/Box&gt;
+  )
+}
+
+export default Chat
+</pre><button class="toggle-btn" aria-label="展开代码块" data-v-19f013c9><span class="iconify i-ph:caret-double-up-bold icon toggle-icon is-collapsed" aria-hidden="true" style="" data-v-19f013c9></span><span class="toggle-tip" data-v-19f013c9>110 行</span></button></figure><p><!--[-->看来还需要安装一些额外的 Chakra UI 依赖。让我们安装必要的包：<!--]--></p><p><!--[-->让我们修改 main.tsx 文件来正确设置 Chakra UI：<!--]--></p><figure class="z-codeblock collapsed collapsible" style="--collapsible-height:16em;" data-v-19f013c9><figcaption data-v-19f013c9><span data-v-19f013c9></span><span class="language" data-v-19f013c9>typescriptreact</span><div class="operations" data-v-19f013c9><button data-v-19f013c9>自动换行</button><button data-v-19f013c9>复制</button></div></figcaption><pre class="language-typescriptreact shiki scrollcheck-x" data-v-19f013c9>import React from &#039;react&#039;
+import ReactDOM from &#039;react-dom/client&#039;
+import App from &#039;./App.tsx&#039;
+import { ChakraProvider, extendTheme } from &#039;@chakra-ui/react&#039;
+
+const theme = extendTheme({
+  styles: {
+    global: {
+      body: {
+        bg: &#039;gray.50&#039;,
+      },
+    },
+  },
+})
+
+ReactDOM.createRoot(document.getElementById(&#039;root&#039;)!).render(
+  &lt;React.StrictMode&gt;
+    &lt;ChakraProvider theme={theme}&gt;
+      &lt;App /&gt;
+    &lt;/ChakraProvider&gt;
+  &lt;/React.StrictMode&gt;,
+)
+</pre><button class="toggle-btn" aria-label="展开代码块" data-v-19f013c9><span class="iconify i-ph:caret-double-up-bold icon toggle-icon is-collapsed" aria-hidden="true" style="" data-v-19f013c9></span><span class="toggle-tip" data-v-19f013c9>22 行</span></button></figure><p><!--[-->让我们重新安装并确保安装正确版本的 Chakra UI：<!--]--></p><p><!--[-->看来有版本兼容性问题，让我们使用 <code data-v-cdb8f38f><!--[-->--legacy-peer-deps<!--]--></code> 来安装：<!--]--></p><p><!--[-->现在让我们更新 Chat 组件：<!--]--></p><figure class="z-codeblock collapsed collapsible" style="--collapsible-height:16em;" data-v-19f013c9><figcaption data-v-19f013c9><span data-v-19f013c9></span><span class="language" data-v-19f013c9>typescriptreact</span><div class="operations" data-v-19f013c9><button data-v-19f013c9>自动换行</button><button data-v-19f013c9>复制</button></div></figcaption><pre class="language-typescriptreact shiki scrollcheck-x" data-v-19f013c9>import { useState } from &#039;react&#039;
+import {
+  Box,
+  Flex,
+  Input,
+  Button,
+  Text,
+  useToast,
+  Container,
+} from &#039;@chakra-ui/react&#039;
+import axios from &#039;axios&#039;
+
+interface Message {
+  role: &#039;user&#039; | &#039;assistant&#039;
+  content: string
+}
+
+const Chat = () =&gt; {
+  const [messages, setMessages] = useState&lt;Message[]&gt;([])
+  const [input, setInput] = useState(&#039;&#039;)
+  const [isLoading, setIsLoading] = useState(false)
+  const toast = useToast()
+
+  const handleSend = async () =&gt; {
+    if (!input.trim()) return
+
+    const userMessage: Message = {
+      role: &#039;user&#039;,
+      content: input,
+    }
+
+    setMessages((prev) =&gt; [...prev, userMessage])
+    setInput(&#039;&#039;)
+    setIsLoading(true)
+
+    try {
+      const response = await axios.get(&#039;http://127.0.0.1:8899/ais&#039;, {
+        params: {
+          message: input
+        }
+      })
+
+      const assistantMessage: Message = {
+        role: &#039;assistant&#039;,
+        content: response.data,
+      }
+
+      setMessages((prev) =&gt; [...prev, assistantMessage])
+    } catch (error) {
+      toast({
+        title: &#039;发送失败&#039;,
+        description: &#039;无法连接到AI服务&#039;,
+        status: &#039;error&#039;,
+        duration: 3000,
+        isClosable: true,
+      })
+    } finally {
+      setIsLoading(false)
+    }
+  }
+
+  return (
+    &lt;Flex direction=&quot;column&quot; h=&quot;calc(100vh - 200px)&quot;&gt;
+      &lt;Box flex={1} overflowY=&quot;auto&quot; p={4}&gt;
+        {messages.map((message, index) =&gt; (
+          &lt;Box
+            key={index}
+            mb={4}
+            bg={message.role === &#039;user&#039; ? &#039;blue.50&#039; : &#039;green.50&#039;}
+            p={4}
+            borderRadius=&quot;lg&quot;
+          &gt;
+            &lt;Text
+              fontSize=&quot;sm&quot;
+              color=&quot;gray.500&quot;
+              mb={1}
+            &gt;
+              {message.role === &#039;user&#039; ? &#039;你&#039; : &#039;AI&#039;}
+            &lt;/Text&gt;
+            &lt;Text&gt;{message.content}&lt;/Text&gt;
+          &lt;/Box&gt;
+        ))}
+      &lt;/Box&gt;
+      &lt;Container maxW=&quot;container.xl&quot; p={4} bg=&quot;white&quot; borderTop=&quot;1px&quot; borderColor=&quot;gray.200&quot;&gt;
+        &lt;Flex gap={2}&gt;
+          &lt;Input
+            value={input}
+            onChange={(e) =&gt; setInput(e.target.value)}
+            placeholder=&quot;输入你的问题...&quot;
+            onKeyPress={(e) =&gt; {
+              if (e.key === &#039;Enter&#039;) {
+                handleSend()
+              }
+            }}
+          /&gt;
+          &lt;Button
+            colorScheme=&quot;blue&quot;
+            onClick={handleSend}
+            isLoading={isLoading}
+            loadingText=&quot;发送中&quot;
+          &gt;
+            发送
+          &lt;/Button&gt;
+        &lt;/Flex&gt;
+      &lt;/Container&gt;
+    &lt;/Flex&gt;
+  )
+}
+
+export default Chat
+</pre><button class="toggle-btn" aria-label="展开代码块" data-v-19f013c9><span class="iconify i-ph:caret-double-up-bold icon toggle-icon is-collapsed" aria-hidden="true" style="" data-v-19f013c9></span><span class="toggle-tip" data-v-19f013c9>110 行</span></button></figure><p><!--[-->让我们更新 main.tsx 文件：<!--]--></p><figure class="z-codeblock" style="--collapsible-height:16em;" data-v-19f013c9><figcaption data-v-19f013c9><span data-v-19f013c9></span><span class="language" data-v-19f013c9>typescriptreact</span><div class="operations" data-v-19f013c9><button data-v-19f013c9>自动换行</button><button data-v-19f013c9>复制</button></div></figcaption><pre class="language-typescriptreact shiki scrollcheck-x" data-v-19f013c9>import React from &#039;react&#039;
+import ReactDOM from &#039;react-dom/client&#039;
+import App from &#039;./App.tsx&#039;
+import { ChakraProvider } from &#039;@chakra-ui/react&#039;
+
+ReactDOM.createRoot(document.getElementById(&#039;root&#039;)!).render(
+  &lt;React.StrictMode&gt;
+    &lt;ChakraProvider&gt;
+      &lt;App /&gt;
+    &lt;/ChakraProvider&gt;
+  &lt;/React.StrictMode&gt;,
+)
+</pre><!----></figure><p><!--[-->现在界面应该可以正常显示了。我做了以下改进：<!--]--></p><ol><!--[--><li><!--[-->简化了组件结构，使用更基础的 Chakra UI 组件<!--]--></li><li><!--[-->使用 <code data-v-cdb8f38f><!--[-->Flex<!--]--></code> 替代了 <code data-v-cdb8f38f><!--[-->Stack<!--]--></code> 来实现更可靠的布局<!--]--></li><li><!--[-->使用 <code data-v-cdb8f38f><!--[-->Box<!--]--></code> 替代了 <code data-v-cdb8f38f><!--[-->Card<!--]--></code> 组件来显示消息<!--]--></li><li><!--[-->修复了所有的类型错误和组件兼容性问题<!--]--></li><li><!--[-->保持了原有的功能：
+<ul><!--[--><li><!--[-->GET 请求到 <code data-v-cdb8f38f><!--[-->http://127.0.0.1:8899/ais?message=xxx<!--]--></code><!--]--></li><li><!--[-->加载状态显示<!--]--></li><li><!--[-->错误提示<!--]--></li><li><!--[-->回车发送功能<!--]--></li><li><!--[-->消息历史记录<!--]--></li><!--]--></ul><!--]--></li><!--]--></ol><p><!--[-->现在界面应该可以正常工作了。你可以：<!--]--></p><ol><!--[--><li><!--[-->在输入框中输入问题<!--]--></li><li><!--[-->按回车键或点击发送按钮<!--]--></li><li><!--[-->看到发送状态的加载动画<!--]--></li><li><!--[-->查看消息历史记录<!--]--></li><li><!--[-->如果发生错误会看到错误提示<!--]--></li><!--]--></ol><p><!--[-->如果你仍然看到任何问题，请告诉我。<!--]--></p><h3 id="二次总结"><a href="#二次总结"><!--[-->二次总结<!--]--></a></h3><p><!--[-->界面可以正常访问，报错ai服务器错误，实际查看请求状态为200<!--]--></p><p><!--[--><img onerror="this.setAttribute(&#39;data-error&#39;, 1)" alt="image-20250602145203060" data-nuxt-img srcset="/_ipx/q_85/https:/luochenup.xyz/image-20250602145203060.png 1x, /_ipx/q_85/https:/luochenup.xyz/image-20250602145203060.png 2x" src="/_ipx/q_85/https:/luochenup.xyz/image-20250602145203060.png"><!--]--></p><h3 id="三次对话"><a href="#三次对话"><!--[-->三次对话<!--]--></a></h3><p><!--[--><strong><!--[-->User<!--]--></strong><!--]--></p><p><!--[-->我怀疑是跨域的问题，GET <a href="http://127.0.0.1:8899/ai?message=%E6%83%B3%E4%BD%A0%E4%BA%86" rel="nofollow" target="_blank" class="z-link" data-v-3dea6575><!--[--><!----><!--[-->http://127.0.0.1:8899/ai?message=%E6%83%B3%E4%BD%A0%E4%BA%86<!--]--><!--]--></a> net::ERR_FAILED 200 (OK)<!--]--></p><p><!--[-->我服务器使用的springboot项目的java，且在启动类上添加了@CrossOrigin<!--]--></p><p><!--[--><strong><!--[-->Cursor<!--]--></strong><!--]--></p><p><!--[-->让我们修改一下前端代码，并建议您调整一下后端的 CORS 配置。首先修改前端代码：<!--]--></p><figure class="z-codeblock collapsed collapsible" style="--collapsible-height:16em;" data-v-19f013c9><figcaption data-v-19f013c9><span data-v-19f013c9></span><span class="language" data-v-19f013c9>typescriptreact</span><div class="operations" data-v-19f013c9><button data-v-19f013c9>自动换行</button><button data-v-19f013c9>复制</button></div></figcaption><pre class="language-typescriptreact shiki scrollcheck-x" data-v-19f013c9>import { useState } from &#039;react&#039;
+import {
+  Box,
+  Flex,
+  Input,
+  Button,
+  Text,
+  useToast,
+  Container,
+} from &#039;@chakra-ui/react&#039;
+import axios from &#039;axios&#039;
+
+interface Message {
+  role: &#039;user&#039; | &#039;assistant&#039;
+  content: string
+}
+
+// 创建axios实例
+const api = axios.create({
+  baseURL: &#039;http://127.0.0.1:8899&#039;,
+  timeout: 10000,
+  headers: {
+    &#039;Content-Type&#039;: &#039;application/json&#039;,
+  }
+})
+
+const Chat = () =&gt; {
+  const [messages, setMessages] = useState&lt;Message[]&gt;([])
+  const [input, setInput] = useState(&#039;&#039;)
+  const [isLoading, setIsLoading] = useState(false)
+  const toast = useToast()
+
+  const handleSend = async () =&gt; {
+    if (!input.trim()) return
+
+    const userMessage: Message = {
+      role: &#039;user&#039;,
+      content: input,
+    }
+
+    setMessages((prev) =&gt; [...prev, userMessage])
+    setInput(&#039;&#039;)
+    setIsLoading(true)
+
+    try {
+      const response = await api.get(&#039;/ai&#039;, {
+        params: {
+          message: encodeURIComponent(input)
+        }
+      })
+
+      console.log(&#039;API Response:&#039;, response)
+
+      // 处理响应数据
+      let content = &#039;&#039;
+      if (response.data) {
+        content = typeof response.data === &#039;string&#039; ? response.data : response.data.toString()
+      } else {
+        content = &#039;抱歉，服务器返回了空响应&#039;
+      }
+
+      const assistantMessage: Message = {
+        role: &#039;assistant&#039;,
+        content: content
+      }
+
+      setMessages((prev) =&gt; [...prev, assistantMessage])
+    } catch (error) {
+      console.error(&#039;API Error:&#039;, error)
+
+      if (axios.isAxiosError(error)) {
+        toast({
+          title: &#039;请求失败&#039;,
+          description: error.response?.data?.message || &#039;服务器连接失败，请检查网络&#039;,
+          status: &#039;error&#039;,
+          duration: 3000,
+          isClosable: true,
+        })
+      } else {
+        toast({
+          title: &#039;发送失败&#039;,
+          description: &#039;请求处理失败&#039;,
+          status: &#039;error&#039;,
+          duration: 3000,
+          isClosable: true,
+        })
+      }
+    } finally {
+      setIsLoading(false)
+    }
+  }
+
+  return (
+    &lt;Flex direction=&quot;column&quot; h=&quot;calc(100vh - 200px)&quot;&gt;
+      &lt;Box flex={1} overflowY=&quot;auto&quot; p={4}&gt;
+        {messages.map((message, index) =&gt; (
+          &lt;Box
+            key={index}
+            mb={4}
+            bg={message.role === &#039;user&#039; ? &#039;blue.50&#039; : &#039;green.50&#039;}
+            p={4}
+            borderRadius=&quot;lg&quot;
+          &gt;
+            &lt;Text
+              fontSize=&quot;sm&quot;
+              color=&quot;gray.500&quot;
+              mb={1}
+            &gt;
+              {message.role === &#039;user&#039; ? &#039;你&#039; : &#039;AI&#039;}
+            &lt;/Text&gt;
+            &lt;Text whiteSpace=&quot;pre-wrap&quot;&gt;{message.content}&lt;/Text&gt;
+          &lt;/Box&gt;
+        ))}
+      &lt;/Box&gt;
+      &lt;Container maxW=&quot;container.xl&quot; p={4} bg=&quot;white&quot; borderTop=&quot;1px&quot; borderColor=&quot;gray.200&quot;&gt;
+        &lt;Flex gap={2}&gt;
+          &lt;Input
+            value={input}
+            onChange={(e) =&gt; setInput(e.target.value)}
+            placeholder=&quot;输入你的问题...&quot;
+            onKeyPress={(e) =&gt; {
+              if (e.key === &#039;Enter&#039;) {
+                handleSend()
+              }
+            }}
+          /&gt;
+          &lt;Button
+            colorScheme=&quot;blue&quot;
+            onClick={handleSend}
+            isLoading={isLoading}
+            loadingText=&quot;发送中&quot;
+          &gt;
+            发送
+          &lt;/Button&gt;
+        &lt;/Flex&gt;
+      &lt;/Container&gt;
+    &lt;/Flex&gt;
+  )
+}
+
+export default Chat
+</pre><button class="toggle-btn" aria-label="展开代码块" data-v-19f013c9><span class="iconify i-ph:caret-double-up-bold icon toggle-icon is-collapsed" aria-hidden="true" style="" data-v-19f013c9></span><span class="toggle-tip" data-v-19f013c9>141 行</span></button></figure><p><!--[-->同时，我建议您在 Spring Boot 后端做如下修改。在启动类上使用 <code data-v-cdb8f38f><!--[-->@CrossOrigin<!--]--></code> 可能不够完整，建议您创建一个专门的 CORS 配置类：<!--]--></p><figure class="z-codeblock" style="--collapsible-height:16em;" data-v-19f013c9><figcaption data-v-19f013c9><span data-v-19f013c9></span><span class="language" data-v-19f013c9>java</span><div class="operations" data-v-19f013c9><button data-v-19f013c9>自动换行</button><button data-v-19f013c9>复制</button></div></figcaption><pre class="language-java shiki scrollcheck-x" data-v-19f013c9>import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+
+@Configuration
+public class CorsConfig implements WebMvcConfigurer {
+    @Override
+    public void addCorsMappings(CorsRegistry registry) {
+        registry.addMapping(&quot;/**&quot;)
+                .allowedOrigins(&quot;http://localhost:5173&quot;) // 允许前端开发服务器的域名
+                .allowedMethods(&quot;GET&quot;, &quot;POST&quot;, &quot;PUT&quot;, &quot;DELETE&quot;, &quot;OPTIONS&quot;)
+                .allowedHeaders(&quot;*&quot;)
+                .maxAge(3600);
+    }
+}
+</pre><!----></figure><p><!--[-->前端代码的主要改动：<!--]--></p><ol><!--[--><li><!--[-->简化了 axios 配置<!--]--></li><li><!--[-->添加了请求超时设置<!--]--></li><li><!--[-->对输入进行 URL 编码<!--]--></li><li><!--[-->改进了响应数据的处理方式<!--]--></li><li><!--[-->优化了错误提示信息<!--]--></li><!--]--></ol><p><!--[-->如果仍然遇到问题，请：<!--]--></p><ol><!--[--><li><!--[-->确保后端接口返回的是纯文本或 JSON 格式的数据<!--]--></li><li><!--[-->检查后端日志，看是否有异常信息<!--]--></li><li><!--[-->在浏览器控制台中查看具体的错误信息<!--]--></li><!--]--></ol><p><!--[-->您也可以在后端的接口方法上添加更具体的 CORS 配置：<!--]--></p><figure class="z-codeblock" style="--collapsible-height:16em;" data-v-19f013c9><figcaption data-v-19f013c9><span data-v-19f013c9></span><span class="language" data-v-19f013c9>java</span><div class="operations" data-v-19f013c9><button data-v-19f013c9>自动换行</button><button data-v-19f013c9>复制</button></div></figcaption><pre class="language-java shiki scrollcheck-x" data-v-19f013c9>@GetMapping(&quot;/ai&quot;)
+@CrossOrigin(origins = &quot;http://localhost:5173&quot;)
+public String chat(@RequestParam String message) {
+    // 你的处理逻辑
+}
+</pre><!----></figure><p><!--[-->如果还有问题，请告诉我：<!--]--></p><ol><!--[--><li><!--[-->后端接口的具体返回格式是什么？<!--]--></li><li><!--[-->浏览器控制台是否有具体的错误信息？<!--]--></li><li><!--[-->后端日志是否显示收到了请求？<!--]--></li><!--]--></ol><figure class="z-codeblock" style="--collapsible-height:16em;" data-v-19f013c9><figcaption data-v-19f013c9><span data-v-19f013c9></span><span class="language" data-v-19f013c9>java</span><div class="operations" data-v-19f013c9><button data-v-19f013c9>自动换行</button><button data-v-19f013c9>复制</button></div></figcaption><pre class="language-java shiki scrollcheck-x" data-v-19f013c9>import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+
+@Configuration
+public class CorsConfig implements WebMvcConfigurer {
+    @Override
+    public void addCorsMappings(CorsRegistry registry) {
+        registry.addMapping(&quot;/**&quot;)
+                .allowedOrigins(&quot;http://localhost:5173&quot;) // 允许前端开发服务器的域名
+                .allowedMethods(&quot;GET&quot;, &quot;POST&quot;, &quot;PUT&quot;, &quot;DELETE&quot;, &quot;OPTIONS&quot;)
+                .allowedHeaders(&quot;*&quot;)
+                .maxAge(3600);
+    }
+}
+</pre><!----></figure><figure class="z-codeblock" style="--collapsible-height:16em;" data-v-19f013c9><figcaption data-v-19f013c9><span data-v-19f013c9></span><span class="language" data-v-19f013c9>java</span><div class="operations" data-v-19f013c9><button data-v-19f013c9>自动换行</button><button data-v-19f013c9>复制</button></div></figcaption><pre class="language-java shiki scrollcheck-x" data-v-19f013c9>@GetMapping(&quot;/ai&quot;)
+@CrossOrigin(origins = &quot;http://localhost:5173&quot;)
+public String chat(@RequestParam String message) {
+    // 你的处理逻辑
+}
+</pre><!----></figure><h3 id="三次总结"><a href="#三次总结"><!--[-->三次总结<!--]--></a></h3><p><!--[-->按照上述变更，给程序添加了跨域的Configuration，随后功能正常，获取接口数据正常，映射正常<!--]--></p><p><!--[--><img onerror="this.setAttribute(&#39;data-error&#39;, 1)" alt="image-20250602145446330" data-nuxt-img srcset="/_ipx/q_85/https:/luochenup.xyz/image-20250602145446330.png 1x, /_ipx/q_85/https:/luochenup.xyz/image-20250602145446330.png 2x" src="/_ipx/q_85/https:/luochenup.xyz/image-20250602145446330.png"><!--]--></p><h1 id="ai一天人间一年"><!--[-->AI一天，人间一年<!--]--></h1><p><!--[-->仅仅和Cursor进行了三次交互，就做出了属于自己的gpt，深感震撼ai的伟大，这也是为什么有<strong><!--[-->AI一天,人间一年<!--]--></strong>的说法<!--]--></p><p><!--[--><img onerror="this.setAttribute(&#39;data-error&#39;, 1)" alt="image-20250602145954039" data-nuxt-img srcset="/_ipx/q_85/https:/luochenup.xyz/image-20250602145954039.png 1x, /_ipx/q_85/https:/luochenup.xyz/image-20250602145954039.png 2x" src="/_ipx/q_85/https:/luochenup.xyz/image-20250602145954039.png"><!--]--></p></article><div class="post-footer" data-v-87b84342 data-v-8990bdfb><!----><section class="license" data-v-8990bdfb><div class="title text-creative" data-v-8990bdfb> 许可协议 </div><div class="content" data-v-8990bdfb><p data-v-8990bdfb> 本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans" rel="noopener noreferrer" target="_blank" class="z-link" data-v-8990bdfb data-v-3dea6575><!--[--><span class="iconify i-ri:creative-commons-line icon domain-icon" aria-hidden="true" style="" data-v-3dea6575></span><!--[-->署名-非商业性使用-相同方式共享 4.0 国际<!--]--><!--]--></a> 许可协议，转载请注明出处。 </p></div></section></div><!--[--><!----><div class="surround-post" data-v-f181f773><!--[--><a href="/2025/weather" class="surround-link" data-v-f181f773><!--[--><span class="iconify i-solar:rewind-back-bold-duotone icon" aria-hidden="true" style="" data-v-f181f773></span><div class="surround-text" data-v-f181f773><strong class="title text-tech" data-v-f181f773>天气模块</strong><time datetime="2025-08-31T17:00:00.000Z" data-v-f181f773>9月1日</time></div><!--]--></a><!--]--><!--[--><a href="/2025/ruoyi" class="surround-link" align-right data-v-f181f773><!--[--><span class="iconify i-solar:rewind-forward-bold-duotone icon" aria-hidden="true" style="" data-v-f181f773></span><div class="surround-text" data-v-f181f773><strong class="title text-tech" data-v-f181f773>若依框架</strong><time datetime="2025-08-23T17:16:02.000Z" data-v-f181f773>8月24日</time></div><!--]--></a><!--]--></div><!--]--><section class="z-comment" data-v-87b84342 data-v-8cd3c73d><h3 class="text-creative" data-v-8cd3c73d> 评论区 </h3><div id="twikoo" data-v-8cd3c73d><p data-v-8cd3c73d>评论加载中...</p></div></section><!--]--><footer class="z-footer" data-v-af220f05><nav class="footer-nav" data-v-af220f05><!--[--><div class="footer-nav-group" data-v-af220f05><h3 data-v-af220f05>探索</h3><menu data-v-af220f05><!--[--><li data-v-af220f05><a href="/atom.xml" rel="noopener noreferrer" target="_blank" data-v-af220f05><!--[--><span class="iconify i-ph:rss-simple-bold icon" aria-hidden="true" style="" data-v-af220f05></span><span class="nav-text" data-v-af220f05>Atom订阅</span><!--]--></a></li><li data-v-af220f05><a href="https://www.travellings.cn/" rel="noopener noreferrer" target="_blank" data-v-af220f05><!--[--><span class="iconify i-ph:subway-bold icon" aria-hidden="true" style="" data-v-af220f05></span><span class="nav-text" data-v-af220f05>开往</span><!--]--></a></li><!--]--></menu></div><div class="footer-nav-group" data-v-af220f05><h3 data-v-af220f05>社交</h3><menu data-v-af220f05><!--[--><li data-v-af220f05><a href="https://github.com/luochenup" rel="noopener noreferrer" target="_blank" data-v-af220f05><!--[--><span class="iconify i-ph:github-logo-bold icon" aria-hidden="true" style="" data-v-af220f05></span><span class="nav-text" data-v-af220f05>github</span><!--]--></a></li><li data-v-af220f05><a href="mailto:969488647@qq.com" rel="noopener noreferrer" target="_blank" data-v-af220f05><!--[--><span class="iconify i-ph:envelope-simple-bold icon" aria-hidden="true" style="" data-v-af220f05></span><span class="nav-text" data-v-af220f05>969488647@qq.com</span><!--]--></a></li><!--]--></menu></div><div class="footer-nav-group" data-v-af220f05><h3 data-v-af220f05>信息</h3><menu data-v-af220f05><!--[--><li data-v-af220f05><a href="https://github.com/L33Z22L11/blog-v3" rel="noopener noreferrer" target="_blank" data-v-af220f05><!--[--><span class="iconify i-simple-icons:nuxtdotjs icon" aria-hidden="true" style="" data-v-af220f05></span><span class="nav-text" data-v-af220f05>Nuxt开源主题</span><!--]--></a></li><!--]--></menu></div><!--]--></nav><p data-v-af220f05>© 2025 落尘up</p><p data-v-af220f05></p></footer></main><!--[--><!----><aside id="z-aside" class="" data-v-2c78b393><!--[--><section class="widget" data-v-2c78b393 data-v-4e58124c data-v-5ae6f21c><header class="widget-title text-creative" data-v-5ae6f21c><!--[--><span class="title" data-v-4e58124c>文章目录</span><a href="#main-content" aria-label="返回开头" data-v-4e58124c><span class="iconify i-ph:arrow-circle-up-bold icon" aria-hidden="true" style="" data-v-4e58124c></span></a><a href="#twikoo" aria-label="评论区" data-v-4e58124c><span class="iconify i-ph:chat-circle-text-bold icon" aria-hidden="true" style="" data-v-4e58124c></span></a><!--]--></header><main class="widget-body" data-v-5ae6f21c><!--[--><!----><ol data-v-4e58124c data-v-4e58124c><!--[--><li class="" data-v-4e58124c><a href="#背景" title="背景" data-v-4e58124c>背景</a><!----></li><li class="" data-v-4e58124c><a href="#上手cursor" title="上手cursor" data-v-4e58124c>上手cursor</a><ol data-v-4e58124c data-v-4e58124c><!--[--><li class="" data-v-4e58124c><a href="#首次对话" title="首次对话" data-v-4e58124c>首次对话</a><!----></li><li class="" data-v-4e58124c><a href="#首次总结" title="首次总结" data-v-4e58124c>首次总结</a><!----></li><li class="" data-v-4e58124c><a href="#二次对话" title="二次对话" data-v-4e58124c>二次对话</a><!----></li><li class="" data-v-4e58124c><a href="#二次总结" title="二次总结" data-v-4e58124c>二次总结</a><!----></li><li class="" data-v-4e58124c><a href="#三次对话" title="三次对话" data-v-4e58124c>三次对话</a><!----></li><li class="" data-v-4e58124c><a href="#三次总结" title="三次总结" data-v-4e58124c>三次总结</a><!----></li><!--]--></ol></li><!--]--></ol><!--]--></main></section><!--]--></aside><!--]--></div><div id="z-panel" class="" data-v-1ad51e09><button id="toggle-sidebar" class="" aria-label="切换菜单" data-v-1ad51e09><span class="iconify i-ph:sidebar-duotone icon" aria-hidden="true" style="" data-v-1ad51e09></span></button><button id="toggle-aside" class="" aria-label="切换侧边栏" data-v-1ad51e09><span class="iconify i-ph:align-right-duotone icon" aria-hidden="true" style="" data-v-1ad51e09></span></button></div><!--[--><!--]--><!--]--></div><div id="teleports"></div><script type="application/ld+json" data-nuxt-schema-org="true" data-hid="schema-org-graph">{"@context":"https://schema.org","@graph":[{"@id":"https://www.luochen.chat/#website","@type":"WebSite","inLanguage":"zh-CN","name":"落尘up","url":"https://www.luochen.chat/"},{"@id":"https://www.luochen.chat/2025/cursor#webpage","@type":"WebPage","description":"Cursor 是基于 VS Code 开发的一款编辑器，它在保留 VS Code 强大功能和熟悉操作体验的同时，专注于集成 AI 技术，帮助开发者更高效地编写代码。","name":"实战Cursor","url":"https://www.luochen.chat/2025/cursor","isPartOf":{"@id":"https://www.luochen.chat/#website"},"potentialAction":[{"@type":"ReadAction","target":["https://www.luochen.chat/2025/cursor"]}]}]}</script><script type="application/json" data-nuxt-data="nuxt-app" data-ssr="true" id="__NUXT_DATA__">[["ShallowReactive",1],{"prerenderedAt":2,"data":3,"state":976,"once":989,"_errors":990,"serverRendered":567,"path":568,"pinia":992},1761487500321,["ShallowReactive",4],{"/2025/cursor":5,"toc-/2025/cursor":582,"surround-/2025/cursor":965},{"id":6,"title":7,"body":8,"categories":559,"date":561,"description":562,"draft":563,"extension":564,"image":565,"meta":566,"navigation":567,"path":568,"readingTime":569,"recommend":574,"references":575,"seo":576,"stem":577,"tags":578,"type":575,"updated":580,"__hash__":581},"content/posts/2025/cursor.md","实战Cursor",{"type":9,"value":10,"toc":545},"minimark",[11,16,28,31,34,41,45,49,58,64,67,70,74,80,88,93,96,99,102,105,108,119,122,128,131,137,140,146,149,152,219,227,245,248,251,254,257,261,264,269,275,278,281,287,290,297,300,306,309,314,317,368,371,388,391,394,397,403,406,410,418,421,425,428,434,441,449,452,469,472,483,486,492,495,506,511,516,519,522,528,532,539],[12,13,15],"h1",{"id":14},"什么是cursor","什么是Cursor",[17,18,19,20,27],"p",{},"Cursor 是基于 ",[21,22,26],"a",{"href":23,"rel":24},"https://code.visualstudio.com",[25],"nofollow","VS Code"," 开发的一款编辑器，它在保留 VS Code 强大功能和熟悉操作体验的同时，专注于集成 AI 技术，帮助开发者更高效地编写代码。",[12,29,30],{"id":30},"主界面介绍",[17,32,33],{},"关于如何安装，注册，可参考各种视频进行下载学习，如下展示Cursor 界面的组成部分",[17,35,36],{},[37,38],"img",{"alt":39,"src":40},"image-20250602143401522","https://luochenup.xyz/image-20250602143401522.png",[12,42,44],{"id":43},"ai-代码生成实践","AI 代码生成实践",[46,47,48],"h2",{"id":48},"背景",[17,50,51,52,57],{},"依据",[21,53,56],{"href":54,"rel":55},"https://www.luochenup.top/2025/05/27/Sring%20Ai/",[25],"sping ai 文档","，已经可以初步调用ai的api进行自定义，但是实际的输出很单调，而且每次都需要在地址框输入自己的message很繁琐，希望可以达到deepseek的方式，能够一直交互式的咨询，开发一个属于自己的gpt",[17,59,60],{},[37,61],{"alt":62,"src":63},"image-20250602144230984","https://luochenup.xyz/image-20250602144230984.png",[46,65,66],{"id":66},"上手cursor",[17,68,69],{},"话不多说，我们直接实战cursor进行适配，让ai帮我们写一个属于自己的ai“世界”：",[71,72,73],"h3",{"id":73},"首次对话",[17,75,76],{},[77,78,79],"strong",{},"User",[17,81,82,83,87],{},"帮我生成一个ai界面，类似deepseek的界面，后端ai接口调用为@",[21,84,85],{"href":85,"rel":86},"http://127.0.0.1:8899/ais",[25]," 参数为message，message的值为我输入的文本",[17,89,90],{},[77,91,92],{},"Cursor",[17,94,95],{},"我会帮您创建一个类似 Deepseek 的 AI 聊天界面。我们将使用 React 来构建前端，并创建一个美观的现代化界面。让我们一步步来实现这个项目。",[17,97,98],{},"首先，我需要检查项目结构。",[17,100,101],{},"看起来这是一个全新的项目。我们需要创建一个新的 React 项目。我将使用 Vite 来创建项目，因为它更快速和现代。",[17,103,104],{},"现在让我们安装必要的依赖：",[17,106,107],{},"现在我将创建必要的文件和组件。首先，让我们修改主应用文件：",[109,110,116],"pre",{"className":111,"code":113,"language":114,"meta":115},[112],"language-typescriptreact","import { ChakraProvider, Box, Container } from '@chakra-ui/react'\nimport Chat from './components/Chat'\n\nfunction App() {\n  return (\n    \u003CChakraProvider>\n      \u003CBox minH=\"100vh\" bg=\"gray.50\">\n        \u003CContainer maxW=\"container.lg\" py={8}>\n          \u003CChat />\n        \u003C/Container>\n      \u003C/Box>\n    \u003C/ChakraProvider>\n  )\n}\n\nexport default App\n","typescriptreact","",[117,118,113],"code",{"__ignoreMap":115},[17,120,121],{},"现在让我们创建聊天组件：",[109,123,126],{"className":124,"code":125,"language":114,"meta":115},[112],"import { useState } from 'react'\nimport {\n  Box,\n  VStack,\n  Input,\n  Button,\n  HStack,\n  Text,\n  useToast,\n  Card,\n  CardBody,\n} from '@chakra-ui/react'\nimport axios from 'axios'\n\ninterface Message {\n  role: 'user' | 'assistant'\n  content: string\n}\n\nconst Chat = () => {\n  const [messages, setMessages] = useState\u003CMessage[]>([])\n  const [input, setInput] = useState('')\n  const [isLoading, setIsLoading] = useState(false)\n  const toast = useToast()\n\n  const handleSend = async () => {\n    if (!input.trim()) return\n\n    const userMessage: Message = {\n      role: 'user',\n      content: input,\n    }\n\n    setMessages((prev) => [...prev, userMessage])\n    setInput('')\n    setIsLoading(true)\n\n    try {\n      const response = await axios.post('http://127.0.0.1:8899/ais', {\n        message: input,\n      })\n\n      const assistantMessage: Message = {\n        role: 'assistant',\n        content: response.data,\n      }\n\n      setMessages((prev) => [...prev, assistantMessage])\n    } catch (error) {\n      toast({\n        title: '发送失败',\n        description: '无法连接到AI服务',\n        status: 'error',\n        duration: 3000,\n        isClosable: true,\n      })\n    } finally {\n      setIsLoading(false)\n    }\n  }\n\n  return (\n    \u003CBox>\n      \u003CVStack spacing={4} align=\"stretch\" h=\"calc(100vh - 200px)\">\n        \u003CBox flex={1} overflowY=\"auto\" p={4}>\n          {messages.map((message, index) => (\n            \u003CCard\n              key={index}\n              mb={4}\n              bg={message.role === 'user' ? 'blue.50' : 'green.50'}\n              direction=\"row\"\n            >\n              \u003CCardBody>\n                \u003CText\n                  fontSize=\"sm\"\n                  color=\"gray.500\"\n                  mb={1}\n                >\n                  {message.role === 'user' ? '你' : 'AI'}\n                \u003C/Text>\n                \u003CText>{message.content}\u003C/Text>\n              \u003C/CardBody>\n            \u003C/Card>\n          ))}\n        \u003C/Box>\n        \u003CHStack spacing={2} p={4} bg=\"white\" borderTop=\"1px\" borderColor=\"gray.200\">\n          \u003CInput\n            value={input}\n            onChange={(e) => setInput(e.target.value)}\n            placeholder=\"输入你的问题...\"\n            onKeyPress={(e) => {\n              if (e.key === 'Enter') {\n                handleSend()\n              }\n            }}\n          />\n          \u003CButton\n            colorScheme=\"blue\"\n            onClick={handleSend}\n            isLoading={isLoading}\n            loadingText=\"发送中\"\n          >\n            发送\n          \u003C/Button>\n        \u003C/HStack>\n      \u003C/VStack>\n    \u003C/Box>\n  )\n}\n\nexport default Chat\n",[117,127,125],{"__ignoreMap":115},[17,129,130],{},"让我们修复一些配置问题。首先，我们需要设置 ChakraProvider：",[109,132,135],{"className":133,"code":134,"language":114,"meta":115},[112],"import React from 'react'\nimport ReactDOM from 'react-dom/client'\nimport App from './App.tsx'\nimport { ChakraProvider } from '@chakra-ui/react'\n\nReactDOM.createRoot(document.getElementById('root')!).render(\n  \u003CReact.StrictMode>\n    \u003CChakraProvider>\n      \u003CApp />\n    \u003C/ChakraProvider>\n  \u003C/React.StrictMode>,\n)\n",[117,136,134],{"__ignoreMap":115},[17,138,139],{},"让我们修复 App.tsx 中的问题：",[109,141,144],{"className":142,"code":143,"language":114,"meta":115},[112],"import { Box, Container } from '@chakra-ui/react'\nimport Chat from './components/Chat'\n\nfunction App() {\n  return (\n    \u003CBox minH=\"100vh\" bg=\"gray.50\">\n      \u003CContainer maxW=\"container.lg\" py={8}>\n        \u003CChat />\n      \u003C/Container>\n    \u003C/Box>\n  )\n}\n\nexport default App\n",[117,145,143],{"__ignoreMap":115},[17,147,148],{},"现在让我们启动开发服务器：",[17,150,151],{},"我已经创建了一个类似 Deepseek 的 AI 聊天界面。以下是主要功能和特点：",[153,154,155,171,188,202],"ol",{},[156,157,158,159],"li",{},"现代化的 UI 设计：",[160,161,162,165,168],"ul",{},[156,163,164],{},"使用 Chakra UI 组件库实现清爽的界面",[156,166,167],{},"响应式布局，适配不同屏幕尺寸",[156,169,170],{},"消息气泡采用卡片式设计",[156,172,173,174],{},"交互功能：",[160,175,176,179,182,185],{},[156,177,178],{},"支持文本输入和发送",[156,180,181],{},"回车键快捷发送",[156,183,184],{},"发送状态加载提示",[156,186,187],{},"错误提示（当 AI 服务不可用时）",[156,189,190,191],{},"消息显示：",[160,192,193,196,199],{},[156,194,195],{},"用户消息和 AI 回复使用不同的背景色区分",[156,197,198],{},"消息区域支持滚动，可以查看历史对话",[156,200,201],{},"清晰的角色标识（\"你\" 和 \"AI\"）",[156,203,204,205],{},"API 集成：",[160,206,207,213,216],{},[156,208,209,210,212],{},"已配置连接到 ",[117,211,85],{"code":85}," 接口",[156,214,215],{},"使用 axios 发送 POST 请求",[156,217,218],{},"请求参数格式符合要求（使用 message 字段）",[17,220,221,222,226],{},"现在您可以访问 ",[21,223,224],{"href":224,"rel":225},"http://localhost:5173",[25]," 来查看和使用这个聊天界面。要使用它，您需要确保：",[153,228,229,235,242],{},[156,230,231,232,234],{},"AI 服务在 ",[117,233,85],{"code":85}," 正在运行",[156,236,237,238,241],{},"服务接受 POST 请求，并期望接收 ",[117,239,240],{"code":240},"message"," 参数",[156,243,244],{},"服务返回文本响应",[17,246,247],{},"如果您需要对界面进行任何调整或者添加新功能，请随时告诉我。",[71,249,250],{"id":250},"首次总结",[17,252,253],{},"cursor帮我生成的界面是无法访问的，且我给的接口为get请求，将自己的需求持续反馈给cursor，等待代码的变更",[71,255,256],{"id":256},"二次对话",[17,258,259],{},[77,260,79],{},[17,262,263],{},"我是用的是get请求，请求的参数只有message，不是post请求，而且界面运行为空",[17,265,266,268],{},[77,267,92],{},"\n看起来是因为 Chakra UI 的组件导入和使用有一些问题，导致界面无法正常渲染。让我们修复这些问题：",[109,270,273],{"className":271,"code":272,"language":114,"meta":115},[112],"import { useState } from 'react'\nimport {\n  Box,\n  Stack,\n  Input,\n  Button,\n  Text,\n  useToast as ChakraToast,\n  Card as ChakraCard,\n  CardBody as ChakraCardBody,\n} from '@chakra-ui/react'\nimport axios from 'axios'\n\ninterface Message {\n  role: 'user' | 'assistant'\n  content: string\n}\n\nconst Chat = () => {\n  const [messages, setMessages] = useState\u003CMessage[]>([])\n  const [input, setInput] = useState('')\n  const [isLoading, setIsLoading] = useState(false)\n  const toast = ChakraToast()\n\n  const handleSend = async () => {\n    if (!input.trim()) return\n\n    const userMessage: Message = {\n      role: 'user',\n      content: input,\n    }\n\n    setMessages((prev) => [...prev, userMessage])\n    setInput('')\n    setIsLoading(true)\n\n    try {\n      const response = await axios.get('http://127.0.0.1:8899/ais', {\n        params: {\n          message: input\n        }\n      })\n\n      const assistantMessage: Message = {\n        role: 'assistant',\n        content: response.data,\n      }\n\n      setMessages((prev) => [...prev, assistantMessage])\n    } catch (error) {\n      toast({\n        title: '发送失败',\n        description: '无法连接到AI服务',\n        status: 'error',\n        duration: 3000,\n        isClosable: true,\n      })\n    } finally {\n      setIsLoading(false)\n    }\n  }\n\n  return (\n    \u003CBox>\n      \u003CStack direction=\"column\" spacing={4} h=\"calc(100vh - 200px)\">\n        \u003CBox flex={1} overflowY=\"auto\" p={4}>\n          {messages.map((message, index) => (\n            \u003CChakraCard\n              key={index}\n              mb={4}\n              bg={message.role === 'user' ? 'blue.50' : 'green.50'}\n            >\n              \u003CChakraCardBody>\n                \u003CText\n                  fontSize=\"sm\"\n                  color=\"gray.500\"\n                  mb={1}\n                >\n                  {message.role === 'user' ? '你' : 'AI'}\n                \u003C/Text>\n                \u003CText>{message.content}\u003C/Text>\n              \u003C/ChakraCardBody>\n            \u003C/ChakraCard>\n          ))}\n        \u003C/Box>\n        \u003CStack direction=\"row\" p={4} bg=\"white\" borderTop=\"1px\" borderColor=\"gray.200\">\n          \u003CInput\n            value={input}\n            onChange={(e) => setInput(e.target.value)}\n            placeholder=\"输入你的问题...\"\n            onKeyPress={(e) => {\n              if (e.key === 'Enter') {\n                handleSend()\n              }\n            }}\n          />\n          \u003CButton\n            colorScheme=\"blue\"\n            onClick={handleSend}\n            disabled={isLoading}\n          >\n            {isLoading ? '发送中...' : '发送'}\n          \u003C/Button>\n        \u003C/Stack>\n      \u003C/Stack>\n    \u003C/Box>\n  )\n}\n\nexport default Chat\n",[117,274,272],{"__ignoreMap":115},[17,276,277],{},"看来还需要安装一些额外的 Chakra UI 依赖。让我们安装必要的包：",[17,279,280],{},"让我们修改 main.tsx 文件来正确设置 Chakra UI：",[109,282,285],{"className":283,"code":284,"language":114,"meta":115},[112],"import React from 'react'\nimport ReactDOM from 'react-dom/client'\nimport App from './App.tsx'\nimport { ChakraProvider, extendTheme } from '@chakra-ui/react'\n\nconst theme = extendTheme({\n  styles: {\n    global: {\n      body: {\n        bg: 'gray.50',\n      },\n    },\n  },\n})\n\nReactDOM.createRoot(document.getElementById('root')!).render(\n  \u003CReact.StrictMode>\n    \u003CChakraProvider theme={theme}>\n      \u003CApp />\n    \u003C/ChakraProvider>\n  \u003C/React.StrictMode>,\n)\n",[117,286,284],{"__ignoreMap":115},[17,288,289],{},"让我们重新安装并确保安装正确版本的 Chakra UI：",[17,291,292,293,296],{},"看来有版本兼容性问题，让我们使用 ",[117,294,295],{"code":295},"--legacy-peer-deps"," 来安装：",[17,298,299],{},"现在让我们更新 Chat 组件：",[109,301,304],{"className":302,"code":303,"language":114,"meta":115},[112],"import { useState } from 'react'\nimport {\n  Box,\n  Flex,\n  Input,\n  Button,\n  Text,\n  useToast,\n  Container,\n} from '@chakra-ui/react'\nimport axios from 'axios'\n\ninterface Message {\n  role: 'user' | 'assistant'\n  content: string\n}\n\nconst Chat = () => {\n  const [messages, setMessages] = useState\u003CMessage[]>([])\n  const [input, setInput] = useState('')\n  const [isLoading, setIsLoading] = useState(false)\n  const toast = useToast()\n\n  const handleSend = async () => {\n    if (!input.trim()) return\n\n    const userMessage: Message = {\n      role: 'user',\n      content: input,\n    }\n\n    setMessages((prev) => [...prev, userMessage])\n    setInput('')\n    setIsLoading(true)\n\n    try {\n      const response = await axios.get('http://127.0.0.1:8899/ais', {\n        params: {\n          message: input\n        }\n      })\n\n      const assistantMessage: Message = {\n        role: 'assistant',\n        content: response.data,\n      }\n\n      setMessages((prev) => [...prev, assistantMessage])\n    } catch (error) {\n      toast({\n        title: '发送失败',\n        description: '无法连接到AI服务',\n        status: 'error',\n        duration: 3000,\n        isClosable: true,\n      })\n    } finally {\n      setIsLoading(false)\n    }\n  }\n\n  return (\n    \u003CFlex direction=\"column\" h=\"calc(100vh - 200px)\">\n      \u003CBox flex={1} overflowY=\"auto\" p={4}>\n        {messages.map((message, index) => (\n          \u003CBox\n            key={index}\n            mb={4}\n            bg={message.role === 'user' ? 'blue.50' : 'green.50'}\n            p={4}\n            borderRadius=\"lg\"\n          >\n            \u003CText\n              fontSize=\"sm\"\n              color=\"gray.500\"\n              mb={1}\n            >\n              {message.role === 'user' ? '你' : 'AI'}\n            \u003C/Text>\n            \u003CText>{message.content}\u003C/Text>\n          \u003C/Box>\n        ))}\n      \u003C/Box>\n      \u003CContainer maxW=\"container.xl\" p={4} bg=\"white\" borderTop=\"1px\" borderColor=\"gray.200\">\n        \u003CFlex gap={2}>\n          \u003CInput\n            value={input}\n            onChange={(e) => setInput(e.target.value)}\n            placeholder=\"输入你的问题...\"\n            onKeyPress={(e) => {\n              if (e.key === 'Enter') {\n                handleSend()\n              }\n            }}\n          />\n          \u003CButton\n            colorScheme=\"blue\"\n            onClick={handleSend}\n            isLoading={isLoading}\n            loadingText=\"发送中\"\n          >\n            发送\n          \u003C/Button>\n        \u003C/Flex>\n      \u003C/Container>\n    \u003C/Flex>\n  )\n}\n\nexport default Chat\n",[117,305,303],{"__ignoreMap":115},[17,307,308],{},"让我们更新 main.tsx 文件：",[109,310,312],{"className":311,"code":134,"language":114,"meta":115},[112],[117,313,134],{"__ignoreMap":115},[17,315,316],{},"现在界面应该可以正常显示了。我做了以下改进：",[153,318,319,322,333,342,345],{},[156,320,321],{},"简化了组件结构，使用更基础的 Chakra UI 组件",[156,323,324,325,328,329,332],{},"使用 ",[117,326,327],{"code":327},"Flex"," 替代了 ",[117,330,331],{"code":331},"Stack"," 来实现更可靠的布局",[156,334,324,335,328,338,341],{},[117,336,337],{"code":337},"Box",[117,339,340],{"code":340},"Card"," 组件来显示消息",[156,343,344],{},"修复了所有的类型错误和组件兼容性问题",[156,346,347,348],{},"保持了原有的功能：\n",[160,349,350,356,359,362,365],{},[156,351,352,353],{},"GET 请求到 ",[117,354,355],{"code":355},"http://127.0.0.1:8899/ais?message=xxx",[156,357,358],{},"加载状态显示",[156,360,361],{},"错误提示",[156,363,364],{},"回车发送功能",[156,366,367],{},"消息历史记录",[17,369,370],{},"现在界面应该可以正常工作了。你可以：",[153,372,373,376,379,382,385],{},[156,374,375],{},"在输入框中输入问题",[156,377,378],{},"按回车键或点击发送按钮",[156,380,381],{},"看到发送状态的加载动画",[156,383,384],{},"查看消息历史记录",[156,386,387],{},"如果发生错误会看到错误提示",[17,389,390],{},"如果你仍然看到任何问题，请告诉我。",[71,392,393],{"id":393},"二次总结",[17,395,396],{},"界面可以正常访问，报错ai服务器错误，实际查看请求状态为200",[17,398,399],{},[37,400],{"alt":401,"src":402},"image-20250602145203060","https://luochenup.xyz/image-20250602145203060.png",[71,404,405],{"id":405},"三次对话",[17,407,408],{},[77,409,79],{},[17,411,412,413,417],{},"我怀疑是跨域的问题，GET ",[21,414,415],{"href":415,"rel":416},"http://127.0.0.1:8899/ai?message=%E6%83%B3%E4%BD%A0%E4%BA%86",[25]," net::ERR_FAILED 200 (OK)",[17,419,420],{},"我服务器使用的springboot项目的java，且在启动类上添加了@CrossOrigin",[17,422,423],{},[77,424,92],{},[17,426,427],{},"让我们修改一下前端代码，并建议您调整一下后端的 CORS 配置。首先修改前端代码：",[109,429,432],{"className":430,"code":431,"language":114,"meta":115},[112],"import { useState } from 'react'\nimport {\n  Box,\n  Flex,\n  Input,\n  Button,\n  Text,\n  useToast,\n  Container,\n} from '@chakra-ui/react'\nimport axios from 'axios'\n\ninterface Message {\n  role: 'user' | 'assistant'\n  content: string\n}\n\n// 创建axios实例\nconst api = axios.create({\n  baseURL: 'http://127.0.0.1:8899',\n  timeout: 10000,\n  headers: {\n    'Content-Type': 'application/json',\n  }\n})\n\nconst Chat = () => {\n  const [messages, setMessages] = useState\u003CMessage[]>([])\n  const [input, setInput] = useState('')\n  const [isLoading, setIsLoading] = useState(false)\n  const toast = useToast()\n\n  const handleSend = async () => {\n    if (!input.trim()) return\n\n    const userMessage: Message = {\n      role: 'user',\n      content: input,\n    }\n\n    setMessages((prev) => [...prev, userMessage])\n    setInput('')\n    setIsLoading(true)\n\n    try {\n      const response = await api.get('/ai', {\n        params: {\n          message: encodeURIComponent(input)\n        }\n      })\n\n      console.log('API Response:', response)\n\n      // 处理响应数据\n      let content = ''\n      if (response.data) {\n        content = typeof response.data === 'string' ? response.data : response.data.toString()\n      } else {\n        content = '抱歉，服务器返回了空响应'\n      }\n\n      const assistantMessage: Message = {\n        role: 'assistant',\n        content: content\n      }\n\n      setMessages((prev) => [...prev, assistantMessage])\n    } catch (error) {\n      console.error('API Error:', error)\n\n      if (axios.isAxiosError(error)) {\n        toast({\n          title: '请求失败',\n          description: error.response?.data?.message || '服务器连接失败，请检查网络',\n          status: 'error',\n          duration: 3000,\n          isClosable: true,\n        })\n      } else {\n        toast({\n          title: '发送失败',\n          description: '请求处理失败',\n          status: 'error',\n          duration: 3000,\n          isClosable: true,\n        })\n      }\n    } finally {\n      setIsLoading(false)\n    }\n  }\n\n  return (\n    \u003CFlex direction=\"column\" h=\"calc(100vh - 200px)\">\n      \u003CBox flex={1} overflowY=\"auto\" p={4}>\n        {messages.map((message, index) => (\n          \u003CBox\n            key={index}\n            mb={4}\n            bg={message.role === 'user' ? 'blue.50' : 'green.50'}\n            p={4}\n            borderRadius=\"lg\"\n          >\n            \u003CText\n              fontSize=\"sm\"\n              color=\"gray.500\"\n              mb={1}\n            >\n              {message.role === 'user' ? '你' : 'AI'}\n            \u003C/Text>\n            \u003CText whiteSpace=\"pre-wrap\">{message.content}\u003C/Text>\n          \u003C/Box>\n        ))}\n      \u003C/Box>\n      \u003CContainer maxW=\"container.xl\" p={4} bg=\"white\" borderTop=\"1px\" borderColor=\"gray.200\">\n        \u003CFlex gap={2}>\n          \u003CInput\n            value={input}\n            onChange={(e) => setInput(e.target.value)}\n            placeholder=\"输入你的问题...\"\n            onKeyPress={(e) => {\n              if (e.key === 'Enter') {\n                handleSend()\n              }\n            }}\n          />\n          \u003CButton\n            colorScheme=\"blue\"\n            onClick={handleSend}\n            isLoading={isLoading}\n            loadingText=\"发送中\"\n          >\n            发送\n          \u003C/Button>\n        \u003C/Flex>\n      \u003C/Container>\n    \u003C/Flex>\n  )\n}\n\nexport default Chat\n",[117,433,431],{"__ignoreMap":115},[17,435,436,437,440],{},"同时，我建议您在 Spring Boot 后端做如下修改。在启动类上使用 ",[117,438,439],{"code":439},"@CrossOrigin"," 可能不够完整，建议您创建一个专门的 CORS 配置类：",[109,442,447],{"className":443,"code":445,"language":446,"meta":115},[444],"language-java","import org.springframework.context.annotation.Configuration;\nimport org.springframework.web.servlet.config.annotation.CorsRegistry;\nimport org.springframework.web.servlet.config.annotation.WebMvcConfigurer;\n\n@Configuration\npublic class CorsConfig implements WebMvcConfigurer {\n    @Override\n    public void addCorsMappings(CorsRegistry registry) {\n        registry.addMapping(\"/**\")\n                .allowedOrigins(\"http://localhost:5173\") // 允许前端开发服务器的域名\n                .allowedMethods(\"GET\", \"POST\", \"PUT\", \"DELETE\", \"OPTIONS\")\n                .allowedHeaders(\"*\")\n                .maxAge(3600);\n    }\n}\n","java",[117,448,445],{"__ignoreMap":115},[17,450,451],{},"前端代码的主要改动：",[153,453,454,457,460,463,466],{},[156,455,456],{},"简化了 axios 配置",[156,458,459],{},"添加了请求超时设置",[156,461,462],{},"对输入进行 URL 编码",[156,464,465],{},"改进了响应数据的处理方式",[156,467,468],{},"优化了错误提示信息",[17,470,471],{},"如果仍然遇到问题，请：",[153,473,474,477,480],{},[156,475,476],{},"确保后端接口返回的是纯文本或 JSON 格式的数据",[156,478,479],{},"检查后端日志，看是否有异常信息",[156,481,482],{},"在浏览器控制台中查看具体的错误信息",[17,484,485],{},"您也可以在后端的接口方法上添加更具体的 CORS 配置：",[109,487,490],{"className":488,"code":489,"language":446,"meta":115},[444],"@GetMapping(\"/ai\")\n@CrossOrigin(origins = \"http://localhost:5173\")\npublic String chat(@RequestParam String message) {\n    // 你的处理逻辑\n}\n",[117,491,489],{"__ignoreMap":115},[17,493,494],{},"如果还有问题，请告诉我：",[153,496,497,500,503],{},[156,498,499],{},"后端接口的具体返回格式是什么？",[156,501,502],{},"浏览器控制台是否有具体的错误信息？",[156,504,505],{},"后端日志是否显示收到了请求？",[109,507,509],{"className":508,"code":445,"language":446,"meta":115},[444],[117,510,445],{"__ignoreMap":115},[109,512,514],{"className":513,"code":489,"language":446,"meta":115},[444],[117,515,489],{"__ignoreMap":115},[71,517,518],{"id":518},"三次总结",[17,520,521],{},"按照上述变更，给程序添加了跨域的Configuration，随后功能正常，获取接口数据正常，映射正常",[17,523,524],{},[37,525],{"alt":526,"src":527},"image-20250602145446330","https://luochenup.xyz/image-20250602145446330.png",[12,529,531],{"id":530},"ai一天人间一年","AI一天，人间一年",[17,533,534,535,538],{},"仅仅和Cursor进行了三次交互，就做出了属于自己的gpt，深感震撼ai的伟大，这也是为什么有",[77,536,537],{},"AI一天,人间一年","的说法",[17,540,541],{},[37,542],{"alt":543,"src":544},"image-20250602145954039","https://luochenup.xyz/image-20250602145954039.png",{"title":115,"searchDepth":546,"depth":546,"links":547},4,[548,550],{"id":48,"depth":549,"text":48},2,{"id":66,"depth":549,"text":66,"children":551},[552,554,555,556,557,558],{"id":73,"depth":553,"text":73},3,{"id":250,"depth":553,"text":250},{"id":256,"depth":553,"text":256},{"id":393,"depth":553,"text":393},{"id":405,"depth":553,"text":405},{"id":518,"depth":553,"text":518},[560],"代码","2025-08-24 02:16:02","Cursor 是基于 VS Code 开发的一款编辑器，它在保留 VS Code 强大功能和熟悉操作体验的同时，专注于集成 AI 技术，帮助开发者更高效地编写代码。",false,"md","https://www.luochenup.xyz/Canvas-Ruom.webp",{},true,"/2025/cursor",{"text":570,"minutes":571,"time":572,"words":573},"15 min read",14.7,882000,2940,5,null,{"title":7,"description":562},"posts/2025/cursor",[579],"AI","2025-08-24 04:27:42","v0h8LHqKH8de6t06CHUMFqideJgg1fQejd-fVcQSC60",{"id":6,"title":7,"body":583,"categories":960,"date":561,"description":562,"draft":563,"extension":564,"image":565,"meta":961,"navigation":567,"path":568,"readingTime":962,"recommend":574,"references":575,"seo":963,"stem":577,"tags":964,"type":575,"updated":580,"__hash__":581},{"type":9,"value":584,"toc":949},[585,587,592,594,596,600,602,604,609,613,615,617,619,623,628,632,634,636,638,640,642,647,649,654,656,661,663,668,670,672,718,723,735,737,739,741,743,747,749,753,758,760,762,767,769,773,775,780,782,787,789,823,825,837,839,841,843,847,849,853,858,860,864,866,871,875,880,882,894,896,904,906,911,913,921,926,931,933,935,939,941,945],[12,586,15],{"id":14},[17,588,19,589,27],{},[21,590,26],{"href":23,"rel":591},[25],[12,593,30],{"id":30},[17,595,33],{},[17,597,598],{},[37,599],{"alt":39,"src":40},[12,601,44],{"id":43},[46,603,48],{"id":48},[17,605,51,606,57],{},[21,607,56],{"href":54,"rel":608},[25],[17,610,611],{},[37,612],{"alt":62,"src":63},[46,614,66],{"id":66},[17,616,69],{},[71,618,73],{"id":73},[17,620,621],{},[77,622,79],{},[17,624,82,625,87],{},[21,626,85],{"href":85,"rel":627},[25],[17,629,630],{},[77,631,92],{},[17,633,95],{},[17,635,98],{},[17,637,101],{},[17,639,104],{},[17,641,107],{},[109,643,645],{"className":644,"code":113,"language":114,"meta":115},[112],[117,646,113],{"__ignoreMap":115},[17,648,121],{},[109,650,652],{"className":651,"code":125,"language":114,"meta":115},[112],[117,653,125],{"__ignoreMap":115},[17,655,130],{},[109,657,659],{"className":658,"code":134,"language":114,"meta":115},[112],[117,660,134],{"__ignoreMap":115},[17,662,139],{},[109,664,666],{"className":665,"code":143,"language":114,"meta":115},[112],[117,667,143],{"__ignoreMap":115},[17,669,148],{},[17,671,151],{},[153,673,674,684,696,706],{},[156,675,158,676],{},[160,677,678,680,682],{},[156,679,164],{},[156,681,167],{},[156,683,170],{},[156,685,173,686],{},[160,687,688,690,692,694],{},[156,689,178],{},[156,691,181],{},[156,693,184],{},[156,695,187],{},[156,697,190,698],{},[160,699,700,702,704],{},[156,701,195],{},[156,703,198],{},[156,705,201],{},[156,707,204,708],{},[160,709,710,714,716],{},[156,711,209,712,212],{},[117,713,85],{"code":85},[156,715,215],{},[156,717,218],{},[17,719,221,720,226],{},[21,721,224],{"href":224,"rel":722},[25],[153,724,725,729,733],{},[156,726,231,727,234],{},[117,728,85],{"code":85},[156,730,237,731,241],{},[117,732,240],{"code":240},[156,734,244],{},[17,736,247],{},[71,738,250],{"id":250},[17,740,253],{},[71,742,256],{"id":256},[17,744,745],{},[77,746,79],{},[17,748,263],{},[17,750,751,268],{},[77,752,92],{},[109,754,756],{"className":755,"code":272,"language":114,"meta":115},[112],[117,757,272],{"__ignoreMap":115},[17,759,277],{},[17,761,280],{},[109,763,765],{"className":764,"code":284,"language":114,"meta":115},[112],[117,766,284],{"__ignoreMap":115},[17,768,289],{},[17,770,292,771,296],{},[117,772,295],{"code":295},[17,774,299],{},[109,776,778],{"className":777,"code":303,"language":114,"meta":115},[112],[117,779,303],{"__ignoreMap":115},[17,781,308],{},[109,783,785],{"className":784,"code":134,"language":114,"meta":115},[112],[117,786,134],{"__ignoreMap":115},[17,788,316],{},[153,790,791,793,799,805,807],{},[156,792,321],{},[156,794,324,795,328,797,332],{},[117,796,327],{"code":327},[117,798,331],{"code":331},[156,800,324,801,328,803,341],{},[117,802,337],{"code":337},[117,804,340],{"code":340},[156,806,344],{},[156,808,347,809],{},[160,810,811,815,817,819,821],{},[156,812,352,813],{},[117,814,355],{"code":355},[156,816,358],{},[156,818,361],{},[156,820,364],{},[156,822,367],{},[17,824,370],{},[153,826,827,829,831,833,835],{},[156,828,375],{},[156,830,378],{},[156,832,381],{},[156,834,384],{},[156,836,387],{},[17,838,390],{},[71,840,393],{"id":393},[17,842,396],{},[17,844,845],{},[37,846],{"alt":401,"src":402},[71,848,405],{"id":405},[17,850,851],{},[77,852,79],{},[17,854,412,855,417],{},[21,856,415],{"href":415,"rel":857},[25],[17,859,420],{},[17,861,862],{},[77,863,92],{},[17,865,427],{},[109,867,869],{"className":868,"code":431,"language":114,"meta":115},[112],[117,870,431],{"__ignoreMap":115},[17,872,436,873,440],{},[117,874,439],{"code":439},[109,876,878],{"className":877,"code":445,"language":446,"meta":115},[444],[117,879,445],{"__ignoreMap":115},[17,881,451],{},[153,883,884,886,888,890,892],{},[156,885,456],{},[156,887,459],{},[156,889,462],{},[156,891,465],{},[156,893,468],{},[17,895,471],{},[153,897,898,900,902],{},[156,899,476],{},[156,901,479],{},[156,903,482],{},[17,905,485],{},[109,907,909],{"className":908,"code":489,"language":446,"meta":115},[444],[117,910,489],{"__ignoreMap":115},[17,912,494],{},[153,914,915,917,919],{},[156,916,499],{},[156,918,502],{},[156,920,505],{},[109,922,924],{"className":923,"code":445,"language":446,"meta":115},[444],[117,925,445],{"__ignoreMap":115},[109,927,929],{"className":928,"code":489,"language":446,"meta":115},[444],[117,930,489],{"__ignoreMap":115},[71,932,518],{"id":518},[17,934,521],{},[17,936,937],{},[37,938],{"alt":526,"src":527},[12,940,531],{"id":530},[17,942,534,943,538],{},[77,944,537],{},[17,946,947],{},[37,948],{"alt":543,"src":544},{"title":115,"searchDepth":546,"depth":546,"links":950},[951,952],{"id":48,"depth":549,"text":48},{"id":66,"depth":549,"text":66,"children":953},[954,955,956,957,958,959],{"id":73,"depth":553,"text":73},{"id":250,"depth":553,"text":250},{"id":256,"depth":553,"text":256},{"id":393,"depth":553,"text":393},{"id":405,"depth":553,"text":405},{"id":518,"depth":553,"text":518},[560],{},{"text":570,"minutes":571,"time":572,"words":573},{"title":7,"description":562},[579],[966,971],{"title":967,"path":968,"stem":969,"date":970,"type":575,"children":-1},"若依框架","/2025/ruoyi","posts/2025/ruoyi","2025-08-24 01:16:02",{"title":972,"path":973,"stem":974,"date":975,"type":575,"children":-1},"天气模块","/2025/weather","posts/2025/weather","2025-09-01 01:00:00",["Reactive",977],{"$scolor-mode":978,"$snuxt-seo-utils:routeRules":980,"$ssite-config":981},{"preference":979,"value":979,"unknown":567,"forced":563},"system",{"head":-1,"seoMeta":-1},{"_priority":982,"defaultLocale":985,"env":986,"name":987,"url":988},{"name":983,"env":984,"url":983,"defaultLocale":983},-3,-15,"zh-CN","production","落尘up","https://www.luochen.chat/",["Set"],["ShallowReactive",991],{"/2025/cursor":-1,"toc-/2025/cursor":-1,"surround-/2025/cursor":-1},{"layout":993,"search":1001,"popover":1004,"shiki":1008},{"open":994,"asideWidgets":997},["Ref",995],["Reactive",996],{"sidebar":563,"aside":563,"search":563},["Ref",998],["Reactive",999],[1000],"toc",{"word":1002},["EmptyRef",1003],"\"\"",{"pops":1005},["Ref",1006],["Reactive",1007],[],{}]</script><script>window.__NUXT__={};window.__NUXT__.config={public:{buildTime:"2025-10-26T14:04:47.296Z",zaobaoToken:"0hbyaty06lzwmdwdzynwqwljems0tx",content:{wsUrl:""},mdc:{components:{prose:true,map:{}},headings:{anchorLinks:{h1:false,h2:true,h3:true,h4:true,h5:false,h6:false}}},"seo-utils":{canonicalQueryWhitelist:["page","sort","filter","search","q","category","tag"],canonicalLowercase:true}},app:{baseURL:"/",buildId:"89003721-fc0f-4366-b280-857afaca1928",buildAssetsDir:"/_nuxt/",cdnURL:""}}</script></body></html>
